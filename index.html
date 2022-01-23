@@ -2,11 +2,157 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+	<meta name="des" content>
+    <title>Sedona</title>
+	<link rel="stylesheet" href="./css/sedona.css">
+	<meta name="keywords" content="Sedona, Седона">
+	<meta name="description" content="Главная страница проекта">
   </head>
   <body>
+    <header class="main-header">
+	 <!-- Шапка сайта -->
+	 <nav>
+		<a class="logo" href="#">
+			<img src="img/logo.svg" alt="Логотип компании ...">
+		</a>
+		<ul class="user-menu">
+		<li><a>Главная</a></li>
+		<li><a>О Седоне</a></li>
+		<li><a href="room.html">Гостиницы</a></li>
+		</ul>
+		<!-- <form>
+		строка поиска 
+		</form> -->
+		<button><img src="" alt="Изображение кнопки поиска"></button>
+		<button><img src="" alt="Изображение кнопки <3"></button><!-- ? -->
+		<button>Хочу сюда!</button>
+	 </nav>
+    </header>
+	
+	<div><!-- find (всплывающее окно) -->
+	<h1>Поиск гостиницы в Седоне</h1>
+	<form action="#" method="post">
+		<p>
+			<label for="start">Дата заезда:</label>
+			<input type="date" value="2022-01-22" id="start" min="2018-07-22">
+			Мы не можем отправить вас в прошлое.
+		</p>
+		<p>
+			<label for="finish">Дата заезда:</label>
+			<input type="date" value="2022-01-23" id="finish">
+			На эти даты есть свободные номера. Пока есть.
+		</p>
+		<p>
+			<label>Взрослые:</label>
+			<input type="number" value="1" min="1">
+			<label>Дети:</label>
+			<input type="number" value="0" min="0">
+		</p>
+		<button type="submit">Найти</button>
+	</form>
+	</div>
+	
+	
+    <main>
+      <!-- Основное содержимое страницы -->
+	  <section class="first_screen1">
+	  <!-- Первый экран -->
+	  	   <p>рисунок 1</p>
+		   <p>рисунок 2</p>
+		   <p>рисунок 3</p>
+		   <p>рисунок 4</p>  
+	  </section>
+	  <section class="first_screen2">
+	  <!-- Первый экран 2-->
+	  	  <h1>Седона — небольшой городок в Аризоне,<br>
+			заслуживающий большего!</h1>
+		  <p>
+		   Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!
+		  </p>
+	  </section>
+	  
+	  <section class="benefits">
+	  <!-- Преимущества -->
+	  <ul>
+		  <li>
+			<h2>Настоящий<br>городок</h2>
+			<p>— №1 —</p>
+			<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+		  </li>
+		  
+		  <li>
+			<h2>Жильё</h2>
+			<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+		  </li>
+		  
+		  <li>
+			<h2>Еда</h2>
+			<p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+		  </li>
+		  
+		  <li>
+			<h2>Сувениры</h2>
+			<p>Не только китайского, но и настоящего местного производства!</p>
+		  </li>
+		  
+		  <li>
+			<h2>Там есть<br>мост дьявола</h2>
+			<p>— №2 —</p>
+			<p>Да, по нему можно пройти! Если вы осмелитесь, разумеется<p>
+		  </li>
+		  
+		  <li>
+			<h2>Небольшая<br>площадь</h2>
+			<p>— №3 —</p>
+			<p>Все достопримечательности находятся очень близко</p>
+		  </li>
+		  
+		  <li>
+			  <h2>Красивая<br>дорога</h2>
+			  <p>— №4 —</p>
+			  <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+		  </li>
+		  
+		  <li>
+		    <h2>Мало<br>туристов</h2>
+		    <p>— №5 —</p>
+			<p>Большинство едет в Гранд Каньон и толпится там</p>
+		  </li>
+  	  </ul>
+	  </section>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+	  <section class="search">
+	  <!-- Поиск гостиницы -->
+	  <h1>Красивая дорога</h1>
+	  <p>Укажите предполагаемые даты поездки,<br>
+	  и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+	  <button >Поиск гостиницы в седоне</button>
+	  </section>
 
+	  <section class="subscribe">
+	  <!-- Рассылка -->
+	  <h1>Подпишитесь на рассылку</h1>
+	  <p>Только полезная информация и никакого спама,<br>
+	  честное бойскаутское!</p>
+	  <form action="#" method="post">
+		<input type="email" placeholder="E-mail" required>
+		<button type="submit">Подписаться</button>
+	  </form>
+	  </section>
+    </main>
+	
+	
+	
+    <footer class="main-footer">
+      <!-- Подвал сайта -->
+	  
+	  <a href=""><img class="soc" src="img/1.svg" alt="twitter"></a>
+	  <a href=""><img class="soc" src="img/2.svg" alt="facebook"></a>
+	  <a href=""><img class="soc" src="img/3.svg" alt="youtube"></a>
+	  
+	  <address>
+		<a href="tel:+7 (812) 812-12-12">+7 (812) 812-12-12<a>
+	  </address>
+    </footer>
   </body>
 </html>
