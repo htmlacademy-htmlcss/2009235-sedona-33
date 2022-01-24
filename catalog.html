@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+	<meta name="des" content>
+    <title>Sedona</title>
+	<link rel="stylesheet" href="./css/catalog.css">
+	<meta name="keywords" content="Sedona, Седона">
+	<meta name="description" content="Страница каталога проекта">
+</head>
+
+<body>
+    <header class="main-header">
+	 <!-- Шапка сайта -->
+	 	<nav class="navigation">
+			<a class="logo" href="index.html">
+				<img src="img/logo.svg" alt="Логотип компании">
+			</a>
+			
+			<ul class="navigation_main-menu">
+				<li class="navigation_item">
+					<a class="navigation_link" href="index.html">Главная</a>
+				</li>
+				<li class="navigation_item">
+					<a class="navigation_link">О Седоне</a>
+				</li>
+				<li class="navigation_item navigation_link_current">
+					<a class="navigation_link">Гостиницы</a>
+				</li>
+			</ul>
+			
+			<ul class="navigation_right-menu">
+				<li class="navigation_item">
+					<a class="navigation_link">
+						<span class="visually-hidden">Поиск</span>
+						<img src="" alt="Поиск">
+					</a>
+				</li>
+				<li class="navigation_item">
+					<a class="navigation_link">
+						<span class="visually-hidden">Лайк</span>
+						<img src="" alt="Лайк">
+					</a>
+				</li>
+				<li class="navigation_item">
+					<button>Хочу сюда!</button> <!-- ? -->
+				</li>
+			<ul>
+	 	</nav>
+	</header>
+	
+	
+	
+    <main class="main_inner">
+    <!-- Основное содержимое страницы -->
+        <header class="main_header">
+            <h1 class="main_inner_h1">Гостинницы Седоны</h1>
+            <ul class="crumbs">
+                <li class="crumbs_item">
+                    <a class="crumbs_link" href="index.html">
+                        <img href="" alt="Домой">
+                    </a>
+                </li>
+                <li class="crumbs_item">
+                    <a class="crumbs_link">Гостинницы</a>
+                </li>
+            </ul>             
+        </header>
+
+        <section class="filter">
+        <!-- Фильтр -->
+            <form action="https://echo.htmlacademy.ru/" method="post">
+                <div class="list">
+                    <fieldset class="filter_list">
+                        <legend>Инфраструктура:</legend>
+                        <label>
+                            <input type="checkbox" name="swimming_pool" checked> Бассейн
+                        </label>
+                            <br>
+                        <label>
+                            <input type="checkbox" name="Parking" checked> Парковка
+                        </label>
+                            <br>
+                        <label>
+                            <input type="checkbox" name="wi-fi" > Wi-fi
+                        </label>
+                    </fieldset>
+                </div>
+                    
+                <div class="list">   
+                    <fieldset class="filter_list">
+                        <legend>Тип жилья:</legend>
+                        <label>
+                            <input type="radio" name="roomtype" value="GHotel" checked> Гостинница
+                        </label>
+                            <br>
+                        <label>
+                            <input type="radio" name="roomtype" value="Motel"> Мотель
+                        </label>
+                            <br>
+                        <label>
+                            <input type="radio" name="roomtype" value="Appartaments"> Апартаменты
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div>
+                    <fieldset class="filter_list2">
+                        <legend>Стоимость, <span>₽</span></legend>
+                        <label>от
+                            <input type="text" value="0"></label>
+                        <label>до
+                            <input type="text" value="9000"></label>
+                        <label>
+                            <input type="range" id="volume" min="0" max="50000" value="9000" step="1">
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div>
+                    <button type="reset">Сбросить</button>
+                    <button type="submit">Найти</button>
+                </div>
+            </form>
+        </section>
+        
+        <section class="first_screen2">
+        <!-- Сортировка -->
+            
+        </section>
+        
+        <section class="catalog">
+        <!-- Каталог -->
+        </section>
+
+        <section class="pagin">
+        <!-- Пагинация -->                
+        </section>
+    </main>
+
+	
+	<section class="subscribe">
+        <!-- Рассылка -->
+        <h2>Подпишитесь на рассылку</h2>
+        <p>Только полезная информация и никакого спама,<br>
+            честное бойскаутское!</p>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+            <label>
+                <input type="email" name="E-mail" placeholder="E-mail" value="Ваш e-mail" required>
+            </label>
+            <button type="submit">Подписаться</button>
+        </form>
+     </section>
+                
+        
+    <footer class="main-footer">
+    <!-- Подвал сайта -->
+        <section class="soc">
+            <h2 class="visually-hidden">Социальные сети</h2>
+            <a href="https://twitter.com/htmlacademy_ru">
+                <span class="visually-hidden">twitter</span>
+            </a>
+            <a href="https://www.facebook.com/htmlacademy">
+                <span class="visually-hidden">facebook</span>
+            </a>
+            <a href="https://www.youtube.com/c/HTMLAcademyRUS">
+                <span class="visually-hidden">youtube</span>
+            </a>
+        </section>
+    
+        <section class="contacts">
+            <address>
+                <h2 class="visually-hidden">Контакты</h2>
+                <a class="contacts_phone" href="tel:+78128121212">+7 (812) 812-12-12<a>
+            </address>
+        </section>
+    
+        <section class="bottom_right">
+            <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+                <img src="/img/logo_htmlacademy.svg" alt="Логотип Html Academy">
+            </a>
+        </section>
+    </footer>
+</body>
+</html>
