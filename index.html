@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+  <head lang="ru">
     <meta charset="utf-8">
 	<meta name="des" content>
     <title>Sedona</title>
@@ -11,26 +11,48 @@
   <body>
     <header class="main-header">
 	 <!-- Шапка сайта -->
-	 <nav>
-		<a class="logo" href="#">
-			<img src="img/logo.svg" alt="Логотип компании ...">
+	 <nav class="navigation">
+		<a class="logo" href="https://htmlacademy.ru/">
+			<img src="img/logo.svg" alt="Логотип компании">
 		</a>
-		<ul class="user-menu">
-		<li><a>Главная</a></li>
-		<li><a>О Седоне</a></li>
-		<li><a href="room.html">Гостиницы</a></li>
+		
+		<ul class="navigation_main-menu">
+			<li class="navigation_item">
+				<a class="navigation_link">Главная</a>
+			</li>
+			<li class="navigation_item">
+				<a class="navigation_link">О Седоне</a>
+			</li>
+			<li class="navigation_item">
+				<a class="navigation_link" href="room.html">Гостиницы</a>
+			</li>
 		</ul>
-		<!-- <form>
-		строка поиска 
-		</form> -->
-		<button><img src="" alt="Изображение кнопки поиска"></button>
-		<button><img src="" alt="Изображение кнопки <3"></button><!-- ? -->
-		<button>Хочу сюда!</button>
+		
+		<ul class="navigation_right-menu">
+			<li class="navigation_item">
+				<a class="navigation_link">
+					<span class="visually-hidden">Поиск</span>
+					<img src="" alt="Поиск">
+				</a>
+			</li>
+			<li class="navigation_item">
+				<a class="navigation_link">
+					<span class="visually-hidden">Лайк</span>
+					<img src="" alt="Лайк">
+				</a>
+			</li><!-- ? -->
+			<li class="navigation_item">
+				<button>Хочу сюда!</button>
+			</li>
+		<ul>
 	 </nav>
     </header>
 	
-	<div><!-- find (всплывающее окно) -->
+<!--	<div> find (всплывающее окно)
 	<h1>Поиск гостиницы в Седоне</h1>
+	<button class="close">
+		<img class="visially-hidden" alt="Закрыть">
+	</button>
 	<form action="#" method="post">
 		<p>
 			<label for="start">Дата заезда:</label>
@@ -43,29 +65,41 @@
 			На эти даты есть свободные номера. Пока есть.
 		</p>
 		<p>
-			<label>Взрослые:</label>
+			<label>Взрослые:
 			<input type="number" value="1" min="1">
-			<label>Дети:</label>
-			<input type="number" value="0" min="0">
+			</label>
+			
+			<label for="children_count">Дети:</label>
+			<button class="dop_info" type="" alt="Дополнительная информация">i</button>
+			<div class="dop_info_bloc">
+				<p>Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+			</div>
+			<input type="number" value="0" min="0" id="children_count">
 		</p>
 		<button type="submit">Найти</button>
 	</form>
-	</div>
+	</div> -->
 	
 	
-    <main>
-      <!-- Основное содержимое страницы -->
+    <main class="main_index">
+      <!-- Основное содержимое страницы (контент не повторяющийся на разных стр.)-->
 	  <section class="first_screen1">
 	  <!-- Первый экран -->
-	  	   <p>рисунок 1</p>
-		   <p>рисунок 2</p>
-		   <p>рисунок 3</p>
-		   <p>рисунок 4</p>  
+		<h1 class="visually-hidden">Sedona</h1>
+		<div class="first_part">
+			<img src="" alt="Welcome">
+			<img src="" alt="To the gargeous">
+			<img src="" alt="SEDONA. Because the Grand Canyon sucks!">
+		</div>
+		<div class="divider">
+			<img class="divider" src="" alt="SEDONA. Because the Grand Canyon sucks!">
+		</div>
 	  </section>
+	  
 	  <section class="first_screen2">
 	  <!-- Первый экран 2-->
-	  	  <h1>Седона — небольшой городок в Аризоне,<br>
-			заслуживающий большего!</h1>
+	  	  <h2>Седона — небольшой городок в Аризоне,<br>
+			заслуживающий большего!</h2>
 		  <p>
 		   Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!
 		  </p>
@@ -75,46 +109,46 @@
 	  <!-- Преимущества -->
 	  <ul>
 		  <li>
-			<h2>Настоящий<br>городок</h2>
+			<h3>Настоящий<br>городок</h3>
 			<p>— №1 —</p>
 			<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
 		  </li>
 		  
 		  <li>
-			<h2>Жильё</h2>
+			<h3>Жильё</h3>
 			<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
 		  </li>
 		  
 		  <li>
-			<h2>Еда</h2>
+			<h3>Еда</h3>
 			<p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
 		  </li>
 		  
 		  <li>
-			<h2>Сувениры</h2>
+			<h3>Сувениры</h3>
 			<p>Не только китайского, но и настоящего местного производства!</p>
 		  </li>
 		  
 		  <li>
-			<h2>Там есть<br>мост дьявола</h2>
+			<h3>Там есть<br>мост дьявола</h3>
 			<p>— №2 —</p>
 			<p>Да, по нему можно пройти! Если вы осмелитесь, разумеется<p>
 		  </li>
 		  
 		  <li>
-			<h2>Небольшая<br>площадь</h2>
+			<h3>Небольшая<br>площадь</h3>
 			<p>— №3 —</p>
 			<p>Все достопримечательности находятся очень близко</p>
 		  </li>
 		  
 		  <li>
-			  <h2>Красивая<br>дорога</h2>
+			  <h3>Красивая<br>дорога</h3>
 			  <p>— №4 —</p>
 			  <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 		  </li>
 		  
 		  <li>
-		    <h2>Мало<br>туристов</h2>
+		    <h3>Мало<br>туристов</h3>
 		    <p>— №5 —</p>
 			<p>Большинство едет в Гранд Каньон и толпится там</p>
 		  </li>
@@ -123,15 +157,16 @@
 
 	  <section class="search">
 	  <!-- Поиск гостиницы -->
-	  <h1>Красивая дорога</h1>
+	  <h2>Красивая дорога</h2>
 	  <p>Укажите предполагаемые даты поездки,<br>
 	  и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 	  <button >Поиск гостиницы в седоне</button>
 	  </section>
+	  </main>
 
 	  <section class="subscribe">
 	  <!-- Рассылка -->
-	  <h1>Подпишитесь на рассылку</h1>
+	  <h2>Подпишитесь на рассылку</h2>
 	  <p>Только полезная информация и никакого спама,<br>
 	  честное бойскаутское!</p>
 	  <form action="#" method="post">
@@ -139,16 +174,15 @@
 		<button type="submit">Подписаться</button>
 	  </form>
 	  </section>
-    </main>
-	
+    	
 	
 	
     <footer class="main-footer">
       <!-- Подвал сайта -->
 	  
-	  <a href=""><img class="soc" src="img/1.svg" alt="twitter"></a>
-	  <a href=""><img class="soc" src="img/2.svg" alt="facebook"></a>
-	  <a href=""><img class="soc" src="img/3.svg" alt="youtube"></a>
+	  <a href="https://twitter.com/htmlacademy_ru"><img class="soc" src="img/1.svg" alt="twitter"></a>
+	  <a href="https://www.facebook.com/htmlacademy"><img class="soc" src="img/2.svg" alt="facebook"></a>
+	  <a href="https://www.youtube.com/c/HTMLAcademyRUS"><img class="soc" src="img/3.svg" alt="youtube"></a>
 	  
 	  <address>
 		<a href="tel:+7 (812) 812-12-12">+7 (812) 812-12-12<a>
