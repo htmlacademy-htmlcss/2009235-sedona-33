@@ -91,7 +91,7 @@
                     <fieldset class="filter_list">
                         <legend>Тип жилья:</legend>
                         <label>
-                            <input type="radio" name="roomtype" value="GHotel" checked> Гостинница
+                            <input type="radio" name="roomtype" value="Hotel" checked> Гостинница
                         </label>
                             <br>
                         <label>
@@ -104,13 +104,14 @@
                     </fieldset>
                 </div>
 
-                <div>
+                <div class="prise">
                     <fieldset class="filter_list2">
                         <legend>Стоимость, <span>₽</span></legend>
                         <label>от
-                            <input type="text" value="0"></label>
+                            <input type="text" name="min_prise" value="0"></label>
                         <label>до
-                            <input type="text" value="9000"></label>
+                            <input type="text" name="max_prise" value="9000">
+                        </label>
                         <br>
                         <label>
                             <input type="range" id="volume" min="0" max="50000" value="9000" step="1">
@@ -118,7 +119,7 @@
                     </fieldset>
                 </div>
 
-                <div>
+                <div class="two_buttons">
                     <button type="reset">Сбросить</button>
                     <button type="submit">Найти</button>
                 </div>
@@ -151,7 +152,7 @@
             <ul class="card-list">
                 <li class="card-card">
                     <a class="card-link" href="product.html">
-                        <img class="card-image" src="" alt="">
+                        <img class="card-image" src="" alt="Вид из окна">
                         <h3 class="card-title">Amara Resort & Spa</h3>
                     </a>
                     <p>Гостиница</p>
@@ -168,7 +169,7 @@
                 </li>
                 <li class="card-card">
                     <a class="card-link" href="product.html">
-                        <img class="card-image" src="" alt="">
+                        <img class="card-image" src="" alt="Вид из окна">
                         <h3 class="card-title">Desert Quail Inn</h3>
                     </a>
                     <p>Гостиница</p>
@@ -184,7 +185,7 @@
                 </li>
                 <li class="card-card">
                     <a class="card-link" href="product.html">
-                        <img class="card-image" src="" alt="">
+                        <img class="card-image" src="" alt="Вид из окна">
                         <h3 class="card-title">Villas at Poco Diablo</h3>
                     </a>
                     <p>Гостиница</p>
@@ -199,7 +200,7 @@
                 </li>
                 <li class="card-card">
                     <a class="card-link" href="product.html">
-                        <img class="card-image" src="" alt="">
+                        <img class="card-image" src="" alt="Вид из окна">
                         <h3 class="card-title">GreenTree Inn</h3>
                     </a>
                     <p>Гостиница</p>
