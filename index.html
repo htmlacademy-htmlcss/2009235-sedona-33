@@ -44,56 +44,11 @@
 					</a>
 				</li>
 				<li class="navigation_item">
-					<button>Хочу сюда!</button> <!-- ? -->
+					<button>Хочу сюда!</button> <!-- в макете явно не описан функционал кнопки -->
 				</li>
 			<ul>
 	 	</nav>
 	</header>
-	
-<!--	<div> ((((find (всплывающее окно)))))
-	<h1>Поиск гостиницы в Седоне</h1>
-	<button class="close">
-		<img class="visially-hidden" alt="Закрыть">
-	</button>
-	<form action="#" method="post">
-		<p>
-			<label for="start">Дата заезда:</label>
-			<input type="date" value="2022-01-22" id="start" min="2018-07-22" name="datein">
-			Мы не можем отправить вас в прошлое.
-		</p>
-		<p>
-			<label for="finish">Дата выезда:</label>
-			<input type="date" value="2022-01-23" id="finish" name="dateout">
-			На эти даты есть свободные номера. Пока есть.
-		</p>
-		<p>
-			<label>Взрослые:
-			<input type="number" value="1" min="1">
-			</label>
-			((((((второй вариант))))))
-			<div class="count">
-      			<lable for="peple_count">Взрослые:</ladle>
-    			<button class="back" type="button">
-    				<span class="visually-hidden">Уменьшить на одного</span>
-    			</button>
-				<input type="text" id="peple_count" value="1">
-    			<button class="next" type="button">
-    				<span class="visually-hidden">Увеличить на одного</span>
-    			</button>
-			</div>
-
-			<label for="children_count">Дети:</label>
-			<button class="dop_info" type="" alt="Дополнительная информация">i</button>
-			<div class="dop_info_bloc">
-				<p>Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
-					 Дети до 6 лет размещаются бесплатно.</p>
-			</div>
-			<input type="number" value="0" min="0" id="children_count">
-		</p>
-		<button type="submit">Найти</button>
-	</form>
-	</div> -->
-	
 	
     <main class="main_index">
 		<!-- Основное содержимое страницы (контент не повторяющийся на разных стр.)-->
@@ -118,47 +73,47 @@
 		
 		<section class="benefits">
 		<!-- Преимущества -->
-			<ul>
-				<li>
+			<ul class="benefits_content">
+				<li class="benefits_content_item">
 					<h3>Настоящий<br>городок</h3>
 					<p>— №1 —</p>
 					<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
 				</li>
 				
-				<li>
+				<li class="benefits_content_item">
 					<h3>Жильё</h3>
 					<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
 				</li>
 				
-				<li>
+				<li class="benefits_content_item">
 					<h3>Еда</h3>
 					<p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
 				</li>
 				
-				<li>
+				<li class="benefits_content_item">
 					<h3>Сувениры</h3>
 					<p>Не только китайского, но и настоящего местного производства!</p>
 				</li>
 				
-				<li>
+				<li class="benefits_content_item">
 					<h3>Там есть<br>мост дьявола</h3>
 					<p>— №2 —</p>
 					<p>Да, по нему можно пройти! Если вы осмелитесь, разумеется<p>
 				</li>
 				
-				<li>
+				<li class="benefits_content_item">
 					<h3>Небольшая<br>площадь</h3>
 					<p>— №3 —</p>
 					<p>Все достопримечательности находятся очень близко</p>
 				</li>
 				
-				<li>
+				<li class="benefits_content_item">
 					<h3>Красивая<br>дорога</h3>
 					<p>— №4 —</p>
 					<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 				</li>
 				
-				<li>
+				<li class="benefits_content_item">
 					<h3>Мало<br>туристов</h3>
 					<p>— №5 —</p>
 					<p>Большинство едет в Гранд Каньон и толпится там</p>
@@ -222,3 +177,49 @@
     </footer>
 </body>
 </html>
+
+
+
+<!--	<div> ((((всплывающее окно)))))
+	<h1>Поиск гостиницы в Седоне</h1>
+	<button class="close">
+		<img class="visially-hidden" alt="Закрыть">
+	</button>
+	<form action="#" method="post">
+		<p>
+			<label for="start">Дата заезда:</label>
+			<input type="date" value="2022-01-22" id="start" min="2018-07-22" name="datein">
+			Мы не можем отправить вас в прошлое.
+		</p>
+		<p>
+			<label for="finish">Дата выезда:</label>
+			<input type="date" value="2022-01-23" id="finish" name="dateout">
+			На эти даты есть свободные номера. Пока есть.
+		</p>
+		<p>
+			<label>Взрослые:
+			<input type="number" value="1" min="1">
+			</label>
+			((((((второй вариант))))))
+			<div class="count">
+      			<lable for="peple_count">Взрослые:</ladle>
+    			<button class="back" type="button">
+    				<span class="visually-hidden">Уменьшить на одного</span>
+    			</button>
+				<input type="text" id="peple_count" value="1">
+    			<button class="next" type="button">
+    				<span class="visually-hidden">Увеличить на одного</span>
+    			</button>
+			</div>
+
+			<label for="children_count">Дети:</label>
+			<button class="dop_info" type="" alt="Дополнительная информация">i</button>
+			<div class="dop_info_bloc">
+				<p>Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+					 Дети до 6 лет размещаются бесплатно.</p>
+			</div>
+			<input type="number" value="0" min="0" id="children_count">
+		</p>
+		<button type="submit">Найти</button>
+	</form>
+	</div> -->
