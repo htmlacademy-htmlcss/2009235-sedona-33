@@ -43,7 +43,8 @@
 					</a>
 				</li>
 				<li class="navigation_item">
-					<button>Хочу сюда!</button> <!-- ? -->
+					<button type="button">Хочу сюда!</button>
+                    <!-- <a class="buttom_brown" href="catalog.html">Хочу сюда!</a> -->
 				</li>
 			<ul>
 	 	</nav>
@@ -107,14 +108,19 @@
                 <div class="prise">
                     <fieldset class="filter_list2">
                         <legend>Стоимость, <span>₽</span></legend>
-                        <label>от
-                            <input type="text" name="min_prise" value="0"></label>
-                        <label>до
-                            <input type="text" name="max_prise" value="9000">
+                        <label>
+                            <input type="text" name="min_prise" placeholder="0">
+                            <!--<input type="number" min="0" max="1000000" name="min_prise" placeholder="0">-->
+                            от
+                        </label>
+                        <label>
+                            <input type="text" name="max_prise" placeholder="9000">
+                            <!--<input type="number" min="0" max="1000000" name="max_prise" placeholder="9000">-->
+                            до
                         </label>
                         <br>
                         <label>
-                            <input type="range" id="volume" min="0" max="50000" value="9000" step="1">
+                            <input type="range" id="volume" min="0" max="1000000" value="9000" step="1">
                         </label>
                     </fieldset>
                 </div>
@@ -262,7 +268,7 @@
             честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" method="post">
             <label>
-                <input type="email" name="E-mail" placeholder="E-mail" value="Ваш e-mail" required>
+                <input type="email" name="E-mail" placeholder="Ваш e-mail" required>
             </label>
             <button type="submit">Подписаться</button>
         </form>
