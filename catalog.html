@@ -46,7 +46,7 @@
 					<button type="button">Хочу сюда!</button>
                     <!-- <a class="buttom_brown" href="catalog.html">Хочу сюда!</a> -->
 				</li>
-			<ul>
+			</ul>
 	 	</nav>
 	</header>
 	
@@ -54,107 +54,110 @@
 	
     <main class="main_inner">
     <!-- Основное содержимое страницы -->
-        <header class="main_header">
+        <header class="header_two">
+            <!-- Хлебные крошки -->
             <h1 class="main_inner_h1">Гостинницы Седоны</h1>
             <ul class="crumbs">
                 <li class="crumbs_item">
                     <a class="crumbs_link" href="index.html">
-                        <img href="" alt="Домой">
+                        <img src="" alt="Домой">
                     </a>
                 </li>
                 <li class="crumbs_item">
                     <a class="crumbs_link">&rsaquo; Гостинницы</a>
                 </li>
             </ul>             
-        </header>
-
-        <section class="filter">
-        <!-- Фильтр -->
-            <form action="https://echo.htmlacademy.ru/" method="post">
-                <div class="list">
+        
+            <section class="filter">
+            <!-- Фильтр -->
+                <h2 class="visually-hidden">Фильтр поиска гостиниц в Седоне</h2>
+                <form action="https://echo.htmlacademy.ru/" method="post">
                     <fieldset class="filter_list">
                         <legend>Инфраструктура:</legend>
                         <label>
                             <input type="checkbox" name="swimming_pool" checked> Бассейн
                         </label>
-                            <br>
                         <label>
                             <input type="checkbox" name="Parking" checked> Парковка
                         </label>
-                            <br>
                         <label>
                             <input type="checkbox" name="wi-fi" > Wi-fi
                         </label>
                     </fieldset>
-                </div>
-                    
-                <div class="list">   
+                                      
                     <fieldset class="filter_list">
                         <legend>Тип жилья:</legend>
                         <label>
                             <input type="radio" name="roomtype" value="Hotel" checked> Гостинница
                         </label>
-                            <br>
                         <label>
                             <input type="radio" name="roomtype" value="Motel"> Мотель
                         </label>
-                            <br>
                         <label>
                             <input type="radio" name="roomtype" value="Appartaments"> Апартаменты
                         </label>
                     </fieldset>
-                </div>
-
-                <div class="prise">
+                 
                     <fieldset class="filter_list2">
                         <legend>Стоимость, <span>₽</span></legend>
-                        <label>
-                            <input type="text" name="min_prise" placeholder="0">
-                            <!--<input type="number" min="0" max="1000000" name="min_prise" placeholder="0">-->
-                            от
-                        </label>
-                        <label>
-                            <input type="text" name="max_prise" placeholder="9000">
-                            <!--<input type="number" min="0" max="1000000" name="max_prise" placeholder="9000">-->
-                            до
-                        </label>
+                            <div class="how_mach">
+                                <label>
+                                    <input type="text" name="min_prise" placeholder="0">
+                                    <!--<input type="number" min="0" max="1000000" name="min_prise" placeholder="0">-->
+                                    от
+                                </label>
+                                <label>
+                                    <input type="text" name="max_prise" placeholder="9000">
+                                    <!--<input type="number" min="0" max="1000000" name="max_prise" placeholder="9000">-->
+                                    до
+                                </label>
+                            </div>
                         <br>
                         <label>
                             <input type="range" id="volume" min="0" max="1000000" value="9000" step="1">
                         </label>
                     </fieldset>
-                </div>
-
-                <div class="two_buttons">
+                    
                     <button type="reset">Сбросить</button>
                     <button type="submit">Найти</button>
-                </div>
-            </form>
-        </section>
-        
+                </form>
+            </section>
+        </header>
+
         <section class="first_screen2">
         <!-- Сортировка -->
             <h2 class="result-stats">Найдено гостиниц: 38</h2>
-            <ladle>
+
+            <label>
                 <select class="select-control" aria-label="Сортировка">
                     <option value="popular">Сначала популярное</option>
                     <option value="cheap" selected>Сначала дешёвое</option>
                     <option value="expensive">Сначала дорогое</option>
                   </select>
-            </ladle>
-            <a href="#" class="button button-light">
-                <span class="visually-hidden">Показать карточки</span>
-            </a>
-            <a class="button" href="#">
-                <span class="visually-hidden">Показать по 1</span>
-            </a>
-            <a class="button" href="#">
-                <span class="visually-hidden">Показать список</span>
-             </a>
+            </label>
+
+            <ul class="visually-result">
+                <li>
+                    <a href="#" class="button button-light">
+                        <span class="visually-hidden">Показать карточки</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="button" >
+                        <span class="visually-hidden">Показать по 1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="button">
+                        <span class="visually-hidden">Показать список</span>
+                    </a>
+                </li>
+            </ul>
         </section>
         
         <section class="catalog">
         <!-- Каталог -->
+            <h2 class="visually-hidden">Каталог гостиниц</h2>
             <ul class="card-list">
                 <li class="card-card">
                     <a class="card-link" href="product.html">
@@ -165,14 +168,15 @@
                     <p class="hotel_price">От 4000₽</p>
                     <a class="left-card-button button" href="#">Подробнее</a>
                     <button type="button">В ибранное</button>
-                    <p>
-                        <img class="star" src="" alt="&Star;">
-                        <img class="star" src="" alt="&Star;">
-                        <img class="star" src="" alt="&Star;">
-                        <img class="star" src="" alt="&Star;">
-                        <span class="rate">Рейтинг: 8,5</span>
-                    </p>
+                    <div class="four_stars">
+                        <p class="visually-hidden">4 звезды</p>
+                    </div>
+                    <div class="rate">
+                        <p>Рейтинг: 8,5</p>
+                    </div>
                 </li>
+
+
                 <li class="card-card">
                     <a class="card-link" href="product.html">
                         <img class="card-image" src="" alt="Вид из окна">
@@ -182,13 +186,15 @@
                     <p class="hotel_price">От 3000₽</p>
                     <a class="left-card-button button" href="#">Подробнее</a>
                     <button type="button">В ибранное</button>
-                    <p>
-                        <img class="star" src="" alt="&Star;">
-                        <img class="star" src="" alt="&Star;">
-                        <img class="star" src="" alt="&Star;">
-                        <span class="rate">Рейтинг: 8,9</span>
-                    </p>
+                    <div class="three_stars">
+                        <p class="visually-hidden">3 звезды</p>
+                    </div>
+                    <div class="rate">
+                        <p>Рейтинг: 8,9</p>
+                    </div>
                 </li>
+
+            
                 <li class="card-card">
                     <a class="card-link" href="product.html">
                         <img class="card-image" src="" alt="Вид из окна">
@@ -197,13 +203,16 @@
                     <p>Гостиница</p>
                     <p class="hotel_price">От 2000₽</p>
                     <a class="left-card-button button" href="#">Подробнее</a>
-                    <button type="button added" >В ибранном</button>
-                    <p>
-                        <img class="star" src="" alt="&Star;">
-                        <img class="star" src="" alt="&Star;">
-                        <span class="rate">Рейтинг: 9,2</span>
-                    </p>
+                    <button type="button" class="added">В ибранном</button>
+                    <div class="two_stars">
+                        <p class="visually-hidden">2 звезды</p>
+                    </div>
+                    <div class="rate">
+                        <p>Рейтинг: 9,2</p>
+                    </div>                    
                 </li>
+
+
                 <li class="card-card">
                     <a class="card-link" href="product.html">
                         <img class="card-image" src="" alt="Вид из окна">
@@ -212,12 +221,13 @@
                     <p>Гостиница</p>
                     <p class="hotel_price">От 3000₽</p>
                     <a class="left-card-button button" href="#">Подробнее</a>
-                    <button type="button">В ибранном</button>
-                    <p>
-                        <img class="star" src="" alt="&Star;">
-                        <img class="star" src="" alt="&Star;">
-                        <span class="rate">Рейтинг: 9,2</span>
-                    </p>
+                    <button type="button">В ибранное</button>
+                    <div class="two_star">
+                        <p class="visually-hidden">2 звезды</p>
+                    </div>
+                    <div class="rate">
+                        <p>Рейтинг: 9,2</p>
+                    </div>                   
                 </li>
             </ul>
         
@@ -228,35 +238,37 @@
         </section>
 
         <section class="pagin">
-        <!-- Пагинация --> 
+        <!-- Пагинация -->
+            <h2 class="visually-hidden">Выборка страниц</h2>
             <ul class="pagination">
                 <li class="pagination-item">
-                <a class="pagination-link pagination-current">1</a>
+                    <a class="pagination-link pagination-current">1</a>
                 </li>
                 <li class="pagination-item">
-                <a class="pagination-link" href="#">2</a>
+                    <a class="pagination-link" href="#">2</a>
                 </li>
                 <li class="pagination-item">
-                <a class="pagination-link" href="#">3</a>
+                    <a class="pagination-link" href="#">3</a>
                 </li>
                 <li class="pagination-item">
-                <a class="pagination-link" href="#">4</a>
+                    <a class="pagination-link" href="#">4</a>
                 </li>
                 <li class="pagination-item">
-                <a class="pagination-link" href="#">...</a>
+                    <a class="pagination-link" href="#">...</a>
                 </li>
                 <li class="pagination-item">
                     <a class="pagination-link" href="#">10</a>
                 </li>
             </ul>
-            <ladle> Гостиниц на странице:
+
+            <label>Гостиниц на странице:
                 <select class="list_count" aria-label="Колличество отображаемых гостинниц">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4" selected>4</option>
                   </select>
-            </ladle>         
+            </label>         
         </section>
     </main>
 
@@ -266,6 +278,7 @@
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама,<br>
             честное бойскаутское!</p>
+
         <form action="https://echo.htmlacademy.ru/" method="post">
             <label>
                 <input type="email" name="E-mail" placeholder="Ваш e-mail" required>
@@ -291,9 +304,9 @@
         </section>
     
         <section class="contacts">
+            <h2 class="visually-hidden">Контакты</h2>
             <address>
-                <h2 class="visually-hidden">Контакты</h2>
-                <a class="contacts_phone" href="tel:+78128121212">+7 (812) 812-12-12<a>
+                <a class="contacts_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
             </address>
         </section>
     
