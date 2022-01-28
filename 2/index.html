@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<head lang="ru">
-    <meta charset="utf-8">
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
 	<meta name="des" content>
-    <title>Sedona</title>
+	<title>Sedona</title>
 	<link rel="stylesheet" href="./css/sedona.css">
 	<meta name="keywords" content="Sedona, Седона">
 	<meta name="description" content="Главная страница проекта">
-   <base href="https://htmlacademy-htmlcss.github.io/2009235-sedona-33/2/">
+  <base href="https://htmlacademy-htmlcss.github.io/2009235-sedona-33/2/">
 </head>
 
 <body>
-    <header class="main-header">
+	<header class="main-header">
 	 <!-- Шапка сайта -->
 	 	<nav class="navigation">
-			<a class="logo" href="https://htmlacademy.ru/">
+			<a class="logo">
 				<img src="img/logo.svg" alt="Логотип компании">
 			</a>
 			
@@ -46,19 +47,17 @@
 					<button type="button">Хочу сюда!</button>
 					<!-- <a class="buttom_brown" href="catalog.html">Хочу сюда!</a> -->
 				</li>
-			<ul>
+			</ul>
 	 	</nav>
 	</header>
 	
-    <main class="main_index">
+	<main class="main_index">
 		<!-- Основное содержимое страницы (контент не повторяющийся на разных стр.)-->
 		<section class="first_screen1">
 		<!-- Первый блок с логотипами (разделен на два блока) -->
 			<h1 class="visually-hidden">Sedona</h1>
 			<div class="first_part">
-				<img src="" alt="Welcome">
-				<img src="" alt="To the gargeous">
-				<img src="" alt="SEDONA. Because the Grand Canyon sucks!">
+				<img src="" alt="Welcome to the gargeous">
 			</div>
 			<div class="divider">
 			<!-- Второй блок, используется для вставки divider в CSS-->
@@ -73,6 +72,7 @@
 		
 		<section class="benefits">
 		<!-- Преимущества -->
+			<h2 class="visually-hidden">Преимущества</h2>
 			<ul class="benefits_content">
 				<li class="benefits_content_item">
 					<h3>Настоящий<br>городок</h3>
@@ -123,7 +123,7 @@
 
 		<section class="search">
 		<!-- Поиск гостиницы -->
-			<h2>Красивая дорога</h2>
+			<h2>Заинтересовались?</h2>
 			<p class="h2_p">Укажите предполагаемые даты поездки,<br> 
 			и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 			<a class="buttom_brown" href="catalog.html">Поиск гостиницы в седоне</a>
@@ -142,7 +142,7 @@
 			<button type="submit">Подписаться</button>
 		</form>
 	</section>
-    	
+		
 	
 	
 	<footer class="main-footer">
@@ -161,10 +161,10 @@
 		</section>
 
 		<section class="contacts">
+			<h2 class="visually-hidden">Контакты</h2>
 			<address>
-				<h2 class="visually-hidden">Контакты</h2>
-				<a class="contacts_phone" href="tel:+78128121212">+7 (812) 812-12-12<a>
-	  		</address>
+				<a class="contacts_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+			</address>
 		</section>
 
 		<section class="bottom_right">
@@ -172,52 +172,6 @@
 				<img src="/img/logo_htmlacademy.svg" alt="Логотип Html Academy">
 			</a>
 		</section>
-    </footer>
+	</footer>
 </body>
 </html>
-
-
-
-<!--	<div> ((((всплывающее окно)))))
-	<h1>Поиск гостиницы в Седоне</h1>
-	<button class="close">
-		<img class="visially-hidden" alt="Закрыть">
-	</button>
-	<form action="action="https://echo.htmlacademy.ru/"" method="post">
-		<p>
-			<label for="start">Дата заезда:</label>
-			<input type="date" value="2022-01-22" id="start" min="2018-07-22" name="datein">
-			Мы не можем отправить вас в прошлое.
-		</p>
-		<p>
-			<label for="finish">Дата выезда:</label>
-			<input type="date" value="2022-01-23" id="finish" name="dateout">
-			На эти даты есть свободные номера. Пока есть.
-		</p>
-		<p>
-			<label>Взрослые:
-			<input type="number" value="1" min="1">
-			</label>
-			((((((второй вариант))))))
-			<div class="count">
-      			<lable for="peple_count">Взрослые:</ladle>
-    			<button class="back" type="button">
-    				<span class="visually-hidden">Уменьшить на одного</span>
-    			</button>
-				<input type="text" id="peple_count" value="1">
-    			<button class="next" type="button">
-    				<span class="visually-hidden">Увеличить на одного</span>
-    			</button>
-			</div>
-
-			<label for="children_count">Дети:</label>
-			<button class="dop_info" type="" alt="Дополнительная информация">i</button>
-			<div class="dop_info_bloc">
-				<p>Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
-					 Дети до 6 лет размещаются бесплатно.</p>
-			</div>
-			<input type="number" value="0" min="0" id="children_count">
-		</p>
-		<button type="submit">Найти</button>
-	</form>
-	</div> -->
