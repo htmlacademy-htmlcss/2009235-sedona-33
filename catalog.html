@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="des" content>
@@ -11,12 +12,12 @@
 
 <body>
 	<header class="main-header">
-	<!-- Шапка сайта -->
+		<!-- Шапка сайта -->
 		<nav class="navigation">
 			<a class="logo" href="index.html">
 				<img src="img/logo.svg" alt="Логотип компании">
 			</a>
-			
+
 			<ul class="navigation_main-menu">
 				<li class="navigation_item">
 					<a class="navigation_link" href="index.html">Главная</a>
@@ -28,7 +29,7 @@
 					<a class="navigation_link">Гостиницы</a>
 				</li>
 			</ul>
-			
+
 			<ul class="navigation_right-menu">
 				<li class="navigation_item">
 					<a class="navigation_link">
@@ -47,13 +48,13 @@
 					<!-- <a class="buttom_brown" href="catalog.html">Хочу сюда!</a> -->
 				</li>
 			</ul>
-	 	</nav>
+		</nav>
 	</header>
-	
-	
-	
+
+
+
 	<main class="main_inner">
-	<!-- Основное содержимое страницы -->
+		<!-- Основное содержимое страницы -->
 		<header class="header_two">
 			<!-- Хлебные крошки -->
 			<h1 class="main_inner_h1">Гостинницы Седоны</h1>
@@ -66,10 +67,10 @@
 				<li class="crumbs_item">
 					<a class="crumbs_link">&rsaquo; Гостинницы</a>
 				</li>
-			</ul>			 
-		
+			</ul>
+
 			<section class="filter">
-			<!-- Фильтр -->
+				<!-- Фильтр -->
 				<h2 class="visually-hidden">Фильтр поиска гостиниц в Седоне</h2>
 				<form action="https://echo.htmlacademy.ru/" method="post">
 					<fieldset class="filter_list">
@@ -81,10 +82,10 @@
 							<input type="checkbox" name="Parking" checked> Парковка
 						</label>
 						<label>
-							<input type="checkbox" name="wi-fi" > Wi-fi
+							<input type="checkbox" name="wi-fi"> Wi-fi
 						</label>
 					</fieldset>
-									  
+
 					<fieldset class="filter_list">
 						<legend>Тип жилья:</legend>
 						<label>
@@ -97,27 +98,27 @@
 							<input type="radio" name="roomtype" value="Appartaments"> Апартаменты
 						</label>
 					</fieldset>
-				 
+
 					<fieldset class="filter_list2">
 						<legend>Стоимость, <span>₽</span></legend>
-							<div class="how_mach">
-								<label>
-									<input type="text" name="min_prise" placeholder="0">
-									<!--<input type="number" min="0" max="1000000" name="min_prise" placeholder="0">-->
-									от
-								</label>
-								<label>
-									<input type="text" name="max_prise" placeholder="9000">
-									<!--<input type="number" min="0" max="1000000" name="max_prise" placeholder="9000">-->
-									до
-								</label>
-							</div>
+						<div class="how_mach">
+							<label>
+								<input type="text" name="min_prise" placeholder="0">
+								<!--<input type="number" min="0" max="1000000" name="min_prise" placeholder="0">-->
+								от
+							</label>
+							<label>
+								<input type="text" name="max_prise" placeholder="9000">
+								<!--<input type="number" min="0" max="1000000" name="max_prise" placeholder="9000">-->
+								до
+							</label>
+						</div>
 						<br>
 						<label>
 							<input type="range" id="volume" min="0" max="1000000" value="9000" step="1">
 						</label>
 					</fieldset>
-					
+
 					<button type="reset">Сбросить</button>
 					<button type="submit">Найти</button>
 				</form>
@@ -125,7 +126,7 @@
 		</header>
 
 		<section class="first_screen2">
-		<!-- Сортировка -->
+			<!-- Сортировка -->
 			<h2 class="result-stats">Найдено гостиниц: 38</h2>
 
 			<label>
@@ -133,7 +134,7 @@
 					<option value="popular">Сначала популярное</option>
 					<option value="cheap" selected>Сначала дешёвое</option>
 					<option value="expensive">Сначала дорогое</option>
-				  </select>
+				</select>
 			</label>
 
 			<ul class="visually-result">
@@ -143,7 +144,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#" class="button" >
+					<a href="#" class="button">
 						<span class="visually-hidden">Показать по 1</span>
 					</a>
 				</li>
@@ -154,9 +155,9 @@
 				</li>
 			</ul>
 		</section>
-		
+
 		<section class="catalog">
-		<!-- Каталог -->
+			<!-- Каталог -->
 			<h2 class="visually-hidden">Каталог гостиниц</h2>
 			<ul class="card-list">
 				<li class="card-card">
@@ -169,9 +170,14 @@
 					<a class="left-card-button button" href="#">Подробнее</a>
 					<button type="button">В ибранное</button>
 
-					<span class="visually-hidden">4 звезды</span>
-					<span class="four_stars"></span>
-					<span class="rate">Рейтинг: 8,5</span>
+					<div>
+						<div class="four_stars">
+							<span class="visually-hidden">4 звезды</span>
+						</div>
+						<div>
+							<span class="rate">Рейтинг: 8,5</span>
+						</div>
+					</div>
 				</li>
 
 
@@ -185,12 +191,17 @@
 					<a class="left-card-button button" href="#">Подробнее</a>
 					<button type="button">В ибранное</button>
 
-					<span class="visually-hidden">3 звезды</span>
-					<span class="three_stars"></span>
-					<span class="rate">Рейтинг: 8,9</span>
+					<div>
+						<div class="three_star">
+							<span class="visually-hidden">3 звезды</span>
+						</div>
+						<div>
+							<span class="rate">Рейтинг: 8,9</span>
+						</div>
+					</div>
 				</li>
 
-			
+
 				<li class="card-card">
 					<a class="card-link" href="product.html">
 						<img class="card-image" src="" alt="Вид из окна">
@@ -200,10 +211,15 @@
 					<p class="hotel_price">От 2000₽</p>
 					<a class="left-card-button button" href="#">Подробнее</a>
 					<button type="button" class="added">В ибранном</button>
-					
-					<span class="visually-hidden">2 звезды</span>
-					<span class="two_star"></span>
-					<span class="rate">Рейтинг: 9,2</span>	
+
+					<div>
+						<div class="two_star">
+							<span class="visually-hidden">2 звезды</span>
+						</div>
+						<div>
+							<span class="rate">Рейтинг: 9,2</span>
+						</div>
+					</div>
 				</li>
 
 
@@ -216,22 +232,26 @@
 					<p class="hotel_price">От 3000₽</p>
 					<a class="left-card-button button" href="#">Подробнее</a>
 					<button type="button">В ибранное</button>
-					
-					<span class="visually-hidden">2 звезды</span>
-					<span class="two_star"></span>
-					<span class="rate">Рейтинг: 9,2</span>
-							   
+
+					<div>
+						<div class="two_star">
+							<span class="visually-hidden">2 звезды</span>
+						</div>
+						<div>
+							<span class="rate">Рейтинг: 9,2</span>
+						</div>
+					</div>
 				</li>
 			</ul>
-		
+
 			<div class="download_more">
-			<!-- Блок кнопки загрузить еще -->
+				<!-- Блок кнопки загрузить еще -->
 				<button class="show-more" type="button">Загрузить еще</button>
 			</div>
 		</section>
 
 		<section class="pagin">
-		<!-- Пагинация -->
+			<!-- Пагинация -->
 			<h2 class="visually-hidden">Выборка страниц</h2>
 			<ul class="pagination">
 				<li class="pagination-item">
@@ -260,12 +280,12 @@
 					<option value="2">2</option>
 					<option value="3">3</option>
 					<option value="4" selected>4</option>
-				  </select>
-			</label>		 
+				</select>
+			</label>
 		</section>
 	</main>
 
-	
+
 	<section class="subscribe">
 		<!-- Рассылка -->
 		<h2>Подпишитесь на рассылку</h2>
@@ -278,11 +298,11 @@
 			</label>
 			<button type="submit">Подписаться</button>
 		</form>
-	 </section>
-				
-		
+	</section>
+
+
 	<footer class="main-footer">
-	<!-- Подвал сайта -->
+		<!-- Подвал сайта -->
 		<section class="soc">
 			<h2 class="visually-hidden">Социальные сети</h2>
 			<a href="https://twitter.com/htmlacademy_ru">
@@ -295,14 +315,14 @@
 				<span class="visually-hidden">youtube</span>
 			</a>
 		</section>
-	
+
 		<section class="contacts">
 			<h2 class="visually-hidden">Контакты</h2>
 			<address>
 				<a class="contacts_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 			</address>
 		</section>
-	
+
 		<section class="bottom_right">
 			<a class="htmlacademy-link" href="https://htmlacademy.ru/">
 				<img src="/img/logo_htmlacademy.svg" alt="Логотип Html Academy">
@@ -310,4 +330,5 @@
 		</section>
 	</footer>
 </body>
+
 </html>
