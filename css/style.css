@@ -1,0 +1,43 @@
+/*-- import Fonts --
+@import url('../fonts/ptsans-400.woff2');
+@import url('../fonts/ptsans-700.woff2');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=PT+Sans:wght@400;700&family=Roboto+Slab:wght@416&family=Rubik+Beastly&display=swap');
+
+@font-face {
+    font-family: "PT Sans";
+    src: local("PT Sans") url("../fonts/ptsans-400.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+   
+@font-face {
+    font-family: "PT Sans";
+    src: local("PT Sans") url("../fonts/ptsans-700.woff2") format("woff2");
+    font-weight: 700;
+    font-style:  normal;
+    font-display: swap;
+}
+*/
+
+* {
+    font-family: 'PT Sans', sans-serif;
+}
+/*--Скрытый элемент--*/
+.visually-hidden {
+    display: none;
+}
+
+/*Шрифт заголовков*/
+h2 {
+    font-size: 30px;
+    line-height: 36px;
+}
+
+/*Кнопки*/
+
+/*ХЕДЕР*/
+
+/*МЕЙН*/
+
+/*ФУТЕР*/
