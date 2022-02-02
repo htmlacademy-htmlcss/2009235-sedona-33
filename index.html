@@ -8,11 +8,11 @@
 
 	<link rel="icon" href="favicon.ico">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-
+	<!--
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=PT+Sans:wght@400;700&family=Roboto+Slab:wght@416&family=Rubik+Beastly&display=swap" rel="stylesheet">
-	
+	-->
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="keywords" content="Sedona, Седона">
 	<meta name="description" content="Главная страница проекта">
@@ -23,24 +23,24 @@
 		<!-- Шапка сайта -->
 		<nav class="navigation">
 			<a class="logo">
-				<img src="img/logo.svg" alt="Логотип компании">
+				<img class="img_logo" src="img/logo.svg" alt="Логотип компании">
 			</a>
 
-			<ul class="navigation_main-menu">
+			<ul class="navigation_main_menu">
 				<li class="navigation_item">
-					<a class="navigation_link navigation_link_current">Главная</a>
+					<a class="navigation_link navigation_link_current" href="#">Главная</a>
 				</li>
 				<li class="navigation_item">
-					<a class="navigation_link">О Седоне</a>
+					<a class="navigation_link" href="#">О Седоне</a>
 				</li>
 				<li class="navigation_item">
 					<a class="navigation_link" href="catalog.html">Гостиницы</a>
 				</li>
 			</ul>
 
-			<ul class="navigation_right-menu">
+			<ul class="navigation_right_menu">
 				<li class="navigation_item">
-					<a class="navigation_link">
+					<a class="navigation_link" href="catalog.html">
 						<span class="visually-hidden">Поиск</span>
 						<img src="" alt="Поиск">
 					</a>
@@ -52,7 +52,7 @@
 					</a>
 				</li>
 				<li class="navigation_item">
-					<button type="button">Хочу сюда!</button>
+					<button class="buttom_brown_div" type="button">Хочу сюда!</button>
 					<!-- <a class="buttom_brown" href="catalog.html">Хочу сюда!</a> -->
 				</li>
 			</ul>
@@ -64,8 +64,8 @@
 		<section class="first_screen1">
 			<!-- Первый блок с логотипами (разделен на два блока) -->
 			<h1 class="visually-hidden">Sedona</h1>
-			<div class="first_part">
-				<img src="" alt="Welcome to the gargeous">
+			<div class="welcome">
+				<img src="img/welcome.svg" alt="Welcome to the gargeous">
 			</div>
 			<div class="divider">
 				<!-- Второй блок, используется для вставки divider в CSS-->
@@ -74,7 +74,7 @@
 
 		<section class="first_screen2">
 			<!-- Первая надпись-->
-			<h2>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+			<h2 class="h2">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
 			<p class="h2_p">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
 		</section>
 
@@ -83,72 +83,78 @@
 			<h2 class="visually-hidden">Преимущества</h2>
 			<ul class="benefits_content">
 				<li class="benefits_content_item">
-					<h3>Настоящий<br>городок</h3>
-					<p>— №1 —</p>
-					<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+					<h3 class="h3">Настоящий<br>городок</h3>
+					<p class="h3_p">— №1 —</p>
+					<p class="h3_p">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
 				</li>
 
 				<li class="benefits_content_item">
-					<h3>Жильё</h3>
-					<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+					<img class="benefits_ico" src="img/hause.svg" alt="Домик">
+					<h3 class="h3">Жильё</h3>
+					<p class="h3_p">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
 				</li>
 
 				<li class="benefits_content_item">
-					<h3>Еда</h3>
-					<p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+					<img class="benefits_ico" src="img/eat.svg" alt="Бургер">
+					<h3 class="h3">Еда</h3>
+					<p class="h3_p">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
 				</li>
 
 				<li class="benefits_content_item">
-					<h3>Сувениры</h3>
-					<p>Не только китайского, но и настоящего местного производства!</p>
+					<img class="benefits_ico" src="img/present.svg" alt="Подарочные сувениры">
+					<h3 class="h3">Сувениры</h3>
+					<p class="h3_p">Не только китайского, но и настоящего местного производства!</p>
 				</li>
 
 				<li class="benefits_content_item">
-					<h3>Там есть<br>мост дьявола</h3>
-					<p>— №2 —</p>
-					<p>Да, по нему можно пройти! Если вы осмелитесь, разумеется
-					<p>
+					<h3 class="h3">Там есть<br>мост дьявола</h3>
+					<p class="h3_p">— №2 —</p>
+					<p class="h3_p">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
 				</li>
 
 				<li class="benefits_content_item">
-					<h3>Небольшая<br>площадь</h3>
-					<p>— №3 —</p>
-					<p>Все достопримечательности находятся очень близко</p>
+					<h3 class="h3">Небольшая<br>площадь</h3>
+					<p class="h3_p">— №3 —</p>
+					<p class="h3_p">Все достопримечательности находятся очень близко</p>
 				</li>
 
 				<li class="benefits_content_item">
-					<h3>Красивая<br>дорога</h3>
-					<p>— №4 —</p>
-					<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+					<h3 class="h3">Красивая<br>дорога</h3>
+					<p class="h3_p">— №4 —</p>
+					<p class="h3_p">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 				</li>
 
 				<li class="benefits_content_item">
-					<h3>Мало<br>туристов</h3>
-					<p>— №5 —</p>
-					<p>Большинство едет в Гранд Каньон и толпится там</p>
+					<h3 class="h3">Мало<br>туристов</h3>
+					<p class="h3_p">— №5 —</p>
+					<p class="h3_p"> Большинство едет в Гранд Каньон и толпится там</p>
 				</li>
 			</ul>
 		</section>
 
 		<section class="search">
 			<!-- Поиск гостиницы -->
-			<h2>Заинтересовались?</h2>
+			<h2 class="h2">Заинтересовались?</h2>
 			<p class="h2_p">Укажите предполагаемые даты поездки,<br>
 				и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-			<a class="buttom_brown" href="catalog.html">Поиск гостиницы в седоне</a>
+			<a class="buttom_brown" href="catalog.html">
+				<div class="buttom_brown_div">Поиск гостиницы в седоне</div>
+			</a>
 		</section>
 	</main>
 
 	<section class="subscribe">
 		<!-- Рассылка -->
-		<h2>Подпишитесь на рассылку</h2>
+		<h2 class="h2">Подпишитесь на рассылку</h2>
 		<p class="h2_p">Только полезная информация и никакого спама,<br>
 			честное бойскаутское!</p>
 		<form action="https://echo.htmlacademy.ru/" method="post">
-			<label>
-				<input type="email" name="E-mail" placeholder="Ваш e-mail" required>
-			</label>
-			<button type="submit">Подписаться</button>
+			<div class="email">
+				<label>
+					<input type="email" name="E-mail" placeholder="Ваш e-mail" required autocomplete="on">
+				</label>
+				<button type="submit">Подписаться</button>
+			</div>
 		</form>
 	</section>
 
@@ -156,17 +162,25 @@
 
 	<footer class="main-footer">
 		<!-- Подвал сайта -->
-		<section class="soc">
+		<section class="social">
 			<h2 class="visually-hidden">Социальные сети</h2>
-			<a class="twitter" href="https://twitter.com/htmlacademy_ru">
-				<span class="visually-hidden">twitter</span>
-			</a>
-			<a class="facebook" href="https://www.facebook.com/htmlacademy">
-				<span class="visually-hidden">facebook</span>
-			</a>
-			<a class="youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
-				<span class="visually-hidden">youtube</span>
-			</a>
+			<ul class="social_list">
+				<li class="social_item">			
+					<a class="twitter" href="https://twitter.com/htmlacademy_ru">
+						<span class="visually-hidden">twitter</span>
+					</a>
+				</li>
+				<li class="social_item">
+					<a class="facebook" href="https://www.facebook.com/htmlacademy">
+						<span class="visually-hidden">facebook</span>
+					</a>
+				</li>
+				<li class="social_item">
+					<a class="youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
+						<span class="visually-hidden">youtube</span>
+					</a>
+				</li>
+			</ul>
 		</section>
 
 		<section class="contacts">
@@ -176,9 +190,9 @@
 			</address>
 		</section>
 
-		<section class="bottom_right">
-			<a class="htmlacademy-link" href="https://htmlacademy.ru/">
-				<img src="/img/logo_htmlacademy.svg" alt="Логотип Html Academy">
+		<section class="htmlacademy_logo">
+			<a class="htmlacademy_logo_link" href="https://htmlacademy.ru/">
+				<img class="htmlacademy_logo_link_img" src="img/logo_htmlacademy.svg" alt="Логотип Html Academy">
 			</a>
 		</section>
 	</footer>

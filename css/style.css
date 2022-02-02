@@ -1,43 +1,260 @@
-/*-- import Fonts --
-@import url('../fonts/ptsans-400.woff2');
-@import url('../fonts/ptsans-700.woff2');
-@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=PT+Sans:wght@400;700&family=Roboto+Slab:wght@416&family=Rubik+Beastly&display=swap');
-
+/*тут важен порядок!*/
 @font-face {
     font-family: "PT Sans";
-    src: local("PT Sans") url("../fonts/ptsans-400.woff2") format("woff2");
-    font-weight: 400;
     font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    /*src: local("PT Sans"), url("../fonts/ptsans-400.woff2") format("woff2");*/
     font-display: swap;
 }
-   
+ 
 @font-face {
     font-family: "PT Sans";
-    src: local("PT Sans") url("../fonts/ptsans-700.woff2") format("woff2");
-    font-weight: 700;
     font-style:  normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
 }
-*/
 
-* {
+/*общий шрифт*/
+body {
     font-family: 'PT Sans', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    padding: 0;
+    margin: 0;
 }
+
 /*--Скрытый элемент--*/
 .visually-hidden {
     display: none;
 }
 
+
 /*Шрифт заголовков*/
-h2 {
+.h2 {
     font-size: 30px;
     line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-/*Кнопки*/
+.h3 {
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
 
-/*ХЕДЕР*/
+/*Шрифты <p> под заголовками*/
+.h2_p {
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    text-align: center;
+}
+.h3_p {
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+}
+.benefits {
+    text-align: center;
+}
+/*убрать точки из списка*/
+.main-header ul, .benefits ul, .main-footer ul { 
+    list-style: none;
+}
 
-/*МЕЙН*/
+/*-------- ХЕДЕР --------*/
 
-/*ФУТЕР*/
+.img_logo {
+    position: absolute;
+    left: 70px;
+    right: 86.89%;
+    top: 0%;
+    width: 139px;
+    height: 70px;
+}
+
+/*ссылки в навигационном меню1*/
+.navigation_link{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.navigation_link_current {
+    border-bottom: 2px solid #756257;
+}
+
+/*Кнопкa в меню2*/
+.navigation_item > .buttom_brown_div {
+    height: 37px;
+    width: 160px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/*-------- МЕЙН --------*/
+
+.first_screen1 {
+    background-image: url("../img/index-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.welcome {
+    padding-top: 51px;
+    text-align: center;
+}
+.divider {
+    height: 57px;
+    background-image: url("../img/divider.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.first_screen2 .h2_p {
+    line-height: 36px;
+}
+/*Преимущества*/
+.benefits_ico {
+    width: 75px;
+    height: 72px;
+}
+
+/*Поиск гостиницы*/
+.buttom_brown {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+.buttom_brown .buttom_brown_div {
+    height: 60px;
+    width: 575px;
+}
+.buttom_brown_div {
+    background: #756257;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+    
+}
+/*анимация для коричневых кнопок*/
+.buttom_brown_div:hover {
+    background: #615048;
+}
+.buttom_brown_div:focus {
+    background: #615048;
+    border: 3px solid #83B3D3;
+}
+.buttom_brown_div:active{
+    background: #615048;
+    color: rgba(255, 255, 255, 0.3);
+}
+/*Рассылка*/
+.subscribe {
+    height: 411px;
+    background-image: url("../img/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.subscribe .h2_p {
+    color: white;
+}
+
+.email {
+    display: flex; /*схлопывает input и button*/
+}
+.email input[type="email"] {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+    background: #F2F2F2;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    height: 60px;
+    width: 600px;
+    padding: 0px 22px 0px 19px;
+}
+
+.email button[type="submit"] {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    background: #83B3D3;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    height: 60px;
+    width: 200px;
+}
+
+/*-------- ФУТЕР --------*/
+
+/* Соцсети */
+.social_item {
+    width: 40px;
+    height: 40px;
+}
+.social_item a {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.twitter {
+    background-image: url("../img/social-twitter.svg");
+}
+.facebook {
+    background-image: url("../img/social-facebook.svg");
+}
+.youtube {
+    background-image: url("../img/social-youtube.svg");
+}
+
+/* Контакты */
+.contacts {
+    text-align: center;
+    vertical-align: middle; /*вертикальное выравниваение*/
+}
+
+.contacts_phone {
+    font-size: 40px;
+    line-height: 40px;
+    color: #000000;
+    font-style: normal;
+    text-decoration: none;
+    padding: 15px;
+}
+.contacts_phone:hover {
+    color: #756257;
+}
+.contacts_phone:focus {
+    color: #756257;
+    border: 3px solid #83B3D3;
+    border-radius: 10px;
+}
+.contacts_phone:active {
+    color: #756257;
+    opacity: 0.3;
+}
+/* Логотип htmlacademy */
+.htmlacademy_logo {
+    vertical-align: middle; /*вертикальное выравниваение*/
+    text-align: center;
+}
