@@ -56,14 +56,36 @@ body {
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    display: block;
 }
-.benefits {
-    text-align: center;
+
+/*Назначение вертикальных отступов*/
+.h2, .h3, .h2_p, .h3_p {
+    margin-block-start: 15px;
+    margin-block-end: 15px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
+.search .h2_p {
+    margin-block-end: 56px;
+}
+
+.subscribe .h2_p {
+    margin-block-end: 46px;
+}
+
+
+
 /*убрать точки из списка*/
 .main-header ul, .benefits ul, .main-footer ul { 
     list-style: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
 }
+/*выравнивание по центру*/
 
 /*-------- ХЕДЕР --------*/
 
@@ -117,16 +139,37 @@ body {
     background-repeat: no-repeat;
     background-position: center bottom;
 }
+/*---------------------------*/
 .first_screen2 .h2_p {
     line-height: 36px;
 }
-/*Преимущества*/
+.first_screen2 {
+    min-height: 282px;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+/*-----------Преимущества--------*/
+.benefits {
+    text-align: center;
+}
 .benefits_ico {
-    width: 75px;
-    height: 72px;
+    text-align: center;
+}
+
+.benefits_content_item {
+    width: 400px;
+    height: 384px;;
 }
 
 /*Поиск гостиницы*/
+.search {
+    height: 417px;
+}
 .buttom_brown {
     font-weight: bold;
     font-size: 20px;
@@ -169,6 +212,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    background-color: darkcyan;
 }
 .subscribe .h2_p {
     color: white;
@@ -176,6 +220,8 @@ body {
 
 .email {
     display: flex; /*схлопывает input и button*/
+    align-content: center;
+    justify-content: center;
 }
 .email input[type="email"] {
     font-family: PT Sans;
