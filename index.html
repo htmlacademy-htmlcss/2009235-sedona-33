@@ -8,11 +8,7 @@
 
 	<link rel="icon" href="favicon.ico">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-	<!--
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=PT+Sans:wght@400;700&family=Roboto+Slab:wght@416&family=Rubik+Beastly&display=swap" rel="stylesheet">
-	-->
+
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="keywords" content="Sedona, Седона">
 	<meta name="description" content="Главная страница проекта">
@@ -42,13 +38,17 @@
 				<li class="navigation_item">
 					<a class="navigation_link" href="catalog.html">
 						<span class="visually-hidden">Поиск</span>
-						<img src="" alt="Поиск">
+						<div class="navigation_link_div top_search"></div>
 					</a>
 				</li>
 				<li class="navigation_item">
 					<a class="navigation_link">
 						<span class="visually-hidden">Лайк</span>
-						<img src="" alt="Лайк">
+						<div class="navigation_link_div like">
+							<div>
+								<output name="like_count">12</output>
+							</div>
+						</div>
 					</a>
 				</li>
 				<li class="navigation_item">
@@ -91,19 +91,19 @@
 				<li class="benefits_content_item_duble duble_one"></li>
 
 				<li class="benefits_content_item two_line_first_slot center">
-					<img class="benefits_ico" src="img/hause.svg" alt="Домик">
+					<div class="benefits_content_item_img"></div>
 					<h3 class="h3">Жильё</h3>
 					<p class="h3_p">Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!</p>
 				</li>
 
 				<li class="benefits_content_item two_line_two_slot center">
-					<img class="benefits_ico" src="img/eat.svg" alt="Бургер">
+					<div class="benefits_content_item_img"></div>
 					<h3 class="h3">Еда</h3>
 					<p class="h3_p">Всегда заказывайте<br> топовый фирменный бургер,<br> вы не разочаруетесь!</p>
 				</li>
 
 				<li class="benefits_content_item two_line_three_slot center">
-					<img class="benefits_ico" src="img/present.svg" alt="Подарочные сувениры">
+					<div class="benefits_content_item_img"></div>
 					<h3 class="h3">Сувениры</h3>
 					<p class="h3_p">Не только китайского, но и настоящего местного производства!</p>
 				</li>
@@ -198,8 +198,10 @@
 		</section>
 
 		<section class="htmlacademy_logo footer_center">
+			<h3 class="visually-hidden">Ссылка Html Academy</h3>
 			<a class="htmlacademy_logo_link" href="https://htmlacademy.ru/">
-				<img class="htmlacademy_logo_link_img" src="img/logo_htmlacademy.svg" alt="Логотип Html Academy">
+				<span class="visually-hidden">Логотип Html Academy</span>
+				<div class="htmlacademy_logo_link_img"></div>
 			</a>
 		</section>
 	</footer>

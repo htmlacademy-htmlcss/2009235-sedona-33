@@ -1,97 +1,97 @@
 /*тут важен порядок!*/
 @font-face {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/ptsans-400.woff2") format("woff2");
-    /*src: local("PT Sans"), url("../fonts/ptsans-400.woff2") format("woff2");*/
-    font-display: swap;
+	font-family: "PT Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/ptsans-400.woff2") format("woff2");
+	/*src: local("PT Sans"), url("../fonts/ptsans-400.woff2") format("woff2");*/
+	font-display: swap;
 }
  
 @font-face {
-    font-family: "PT Sans";
-    font-style:  normal;
-    font-weight: 700;
-    src: url("../fonts/ptsans-700.woff2") format("woff2");
-    font-display: swap;
+	font-family: "PT Sans";
+	font-style:  normal;
+	font-weight: 700;
+	src: url("../fonts/ptsans-700.woff2") format("woff2");
+	font-display: swap;
 }
 
 /*общий шрифт*/
 body {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 22px;
-    line-height: 26px;
-    padding: 0;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 22px;
+	line-height: 26px;
+	padding: 0;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
 }
 
 /*--Скрытый элемент--*/
 .visually-hidden {
-    display: none;
+	display: none;
 }
 
 
 /*Шрифт заголовков*/
 .h2 {
-    font-size: 30px;
-    line-height: 36px;
-    text-transform: uppercase;
-    text-align: center;
+	font-size: 30px;
+	line-height: 36px;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 .h3 {
-    font-size: 24px;
-    line-height: 28px;
-    text-transform: uppercase;
+	font-size: 24px;
+	line-height: 28px;
+	text-transform: uppercase;
 }
 
 /*Шрифты <p> под заголовками*/
 .h2_p {
-    font-size: 22px;
-    line-height: 26px;
-    color: #333333;
-    text-align: center;
-    font-weight: normal;
+	font-size: 22px;
+	line-height: 26px;
+	color: #333333;
+	text-align: center;
+	font-weight: normal;
 }
 .h3_p {
-    font-size: 18px;
-    line-height: 21px;
-    color: #333333;
-    text-align: center;
-    font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	color: #333333;
+	text-align: center;
+	font-weight: normal;
 }
 
 /*Назначение вертикальных отступов*/
 .h2, .h2_p {
-    margin-block-start: 15px;
-    margin-block-end: 15px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+	margin-block-start: 15px;
+	margin-block-end: 15px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
 }
 
 .h3, .h3_p {
-    margin-block-start: 15px;
-    margin-block-end: 15px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+	margin-block-start: 15px;
+	margin-block-end: 15px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
 }
 
 .search .h2_p {
-    margin-block-end: 56px;
+	margin-block-end: 56px;
 }
 
 .subscribe .h2_p {
-    margin-block-end: 46px;
+	margin-block-end: 46px;
 }
 
 /*содержимое элемента в центре */
 .center {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 
@@ -99,35 +99,76 @@ body {
 /*-------- ХЕДЕР --------*/
 
 .img_logo {
-    position: absolute;
-    left: 70px;
-    right: 86.89%;
-    top: 0%;
-    width: 139px;
-    height: 70px;
+	position: absolute;
+	left: 70px;
+	right: 86.89%;
+	top: 0%;
+	width: 139px;
+	height: 70px;
 }
 
 /*ссылки в навигационном меню1*/
 .navigation_link{
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    color: black;
-    text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 26px;
+	color: black;
+	text-decoration: none;
 }
 .navigation_link_current {
-    border-bottom: 2px solid #756257;
+	border-bottom: 2px solid #756257;
 }
+
+/*ссылки в навигационном меню 2*/
+.navigation_link_div {
+	width: 42px;
+	height: 36px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.navigation_link_div.top_search {
+	background-image: url(../img/search.svg);
+}
+
+.navigation_link_div.like {
+	background-image: url(../img/favorite.svg);
+}
+
+.navigation_link_div div {
+	border-radius: 50%;
+	background-color: #7DB54F;
+	width: 20px;
+	height: 20px;
+	right: 0%;
+	margin-right: -3px;
+	float: right;
+}
+
+.navigation_link_div output {
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 13px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	color: white;
+	width: inherit;
+	height: inherit;
+}
+
 
 /*Кнопкa в меню2*/
 .navigation_item .buttom_brown_div {
-    height: 37px;
-    width: 160px;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    color: white;
+	height: 37px;
+	width: 160px;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: white;
 }
 
 
@@ -137,187 +178,210 @@ body {
 /*-------- МЕЙН --------*/
 
 .first_screen1 {
-    background-image: url("../img/index-background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-image: url("../img/index-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .welcome {
-    padding-top: 51px;
-    text-align: center;
+	padding-top: 51px;
+	text-align: center;
 }
 .divider {
-    height: 57px;
-    background-image: url("../img/divider.svg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
+	height: 57px;
+	background-image: url("../img/divider.svg");
+	background-repeat: no-repeat;
+	background-position: center bottom;
 }
 /*---------------------------*/
 .first_screen2 .h2_p {
-    line-height: 36px;
+	line-height: 36px;
 }
 .first_screen2 {
-    min-height: 282px;
+	min-height: 282px;
 }
 
 /*-----------Преимущества--------*/
-.benefits {
-    text-align: center;
+/* (список выровнен для удобства просмотра) */
+.benefits_content {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .benefits_content_item {
-    width: 400px;
-    height: 384px;
+	width: 400px;
+	height: 384px;
 }
 
 
 .benefits_content_item_duble {
-    width: 800px;
-    height: 384px;
+	width: 800px;
+	height: 384px;
 }
 
 .duble_one {
-    background-image: url(../img/photo-1.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+	background-image: url(../img/photo-1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 }
 
 .duble_two {
-    background-image: url(../img/photo-2.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+	background-image: url(../img/photo-2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 }
 .first_line_first_slot,
 .three_line_three_slot {
-    background-color: #83B3D3;
-    color: #FFFFFF;;
+	background-color: #83B3D3;
+	color: #FFFFFF;;
 }
 .first_line_first_slot .h3_p,
 .three_line_three_slot .h3_p {
-    width: 220px;
-    color: #FFFFFF;;
+	width: 220px;
+	color: #FFFFFF;;
 }
 .two_line_first_slot,
 .two_line_three_slot,
 .four_line_first_slot,
 .four_line_three_slot {
-    background-color: rgba(131, 179, 211, 0.12);
+	background-color: rgba(131, 179, 211, 0.12);
 }
 
 .four_line_first_slot .h3_p,
 .four_line_two_slot .h3_p,
 .four_line_three_slot .h3_p{
-    width: 250px;
+	width: 250px;
 }
 
 .four_line_two_slot {
-    background-color: rgba(131, 179, 211, 0.2);
+	background-color: rgba(131, 179, 211, 0.2);
 }
 
 
 .two_line_first_slot .h3_p,
 .two_line_two_slot .h3_p,
 .two_line_three_slot .h3_p {
-    width: 250px;
-    margin-block-start: 10px;
-    margin-block-end: 10px;
+	width: 250px;
+	margin-block-start: 10px;
+	margin-block-end: 10px;
 }
 
+.benefits_content_item_img {
+	height: 95px;
+	width: 95px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.two_line_first_slot .benefits_content_item_img {
+	background-image: url(../img/hause.svg);
+}
+
+.two_line_two_slot .benefits_content_item_img {
+	background-image: url(../img/eat.svg);
+}
+
+.two_line_three_slot .benefits_content_item_img {
+	background-image: url(../img/present.svg);
+}
 
 
 /*убрать точки и отступы из списка*/
 .main-header ul, .benefits ul, .main-footer ul { 
-    list-style: none;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
+	list-style: none;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 0px;
 }
 
 /*--------------Поиск гостиницы-----------*/
 .search {
-    height: 417px;
+	height: 417px;
 }
 .buttom_brown {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 36px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 36px;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
 }
 .buttom_brown .buttom_brown_div {
-    height: 60px;
-    width: 575px;
+	height: 60px;
+	width: 575px;
 }
 .buttom_brown_div {
-    background: #756257;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center
-    
+	background: #756257;
+	cursor: pointer;
+	border: none;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center
+	
 }
 /*анимация для коричневых кнопок*/
 .buttom_brown_div:hover {
-    background: #615048;
+	background: #615048;
 }
 .buttom_brown_div:focus {
-    background: #615048;
-    border: 3px solid #83B3D3;
+	background: #615048;
+	border: 3px solid #83B3D3;
 }
 .buttom_brown_div:active{
-    background: #615048;
-    color: rgba(255, 255, 255, 0.3);
+	background: #615048;
+	color: rgba(255, 255, 255, 0.3);
 }
 /*-------------------Рассылка-----------------*/
 .subscribe {
-    height: 411px;
-    background-image: url("../img/background2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    background-color: darkcyan;
+	height: 411px;
+	background-image: url("../img/background2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	background-color: darkcyan;
 }
 .subscribe .h2_p {
-    color: white;
+	color: white;
 }
 
 .email {
-    display: flex; /*схлопывает input и button*/
-    align-content: center;
-    justify-content: center;
+	display: flex; /*схлопывает input и button*/
+	align-content: center;
+	justify-content: center;
 }
 .email input[type="email"] {
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 26px;
-    color: #000000;
-    background: #F2F2F2;
-    border: none;
-    border-radius: 10px 0px 0px 10px;
-    height: 60px;
-    width: 600px;
-    padding: 0px 22px 0px 19px;
+	font-family: PT Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 26px;
+	color: #000000;
+	background: #F2F2F2;
+	border: none;
+	border-radius: 10px 0px 0px 10px;
+	height: 60px;
+	width: 600px;
+	padding: 0px 22px 0px 19px;
 }
 
 .email button[type="submit"] {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    text-transform: uppercase;
-    color: white;
-    cursor: pointer;
-    background: #83B3D3;
-    border: none;
-    border-radius: 0px 10px 10px 0px;
-    height: 60px;
-    width: 200px;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 26px;
+	text-transform: uppercase;
+	color: white;
+	cursor: pointer;
+	background: #83B3D3;
+	border: none;
+	border-radius: 0px 10px 10px 0px;
+	height: 60px;
+	width: 200px;
 }
 
 
@@ -325,52 +389,71 @@ body {
 
 
 /*-------- ФУТЕР --------*/
+.main-footer {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 120px;
+	align-content: center;
+	flex-direction: row;
+}
+
 .footer_center {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 /*-------------Соцсети------------*/
+.social_list {
+	display: flex;
+	flex-direction: row;
+}
 .social_div {
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40px;
-    height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 40px;
 }
 .twitter .social_div {
-    background-image: url("../img/social-twitter.svg");
+	background-image: url("../img/social-twitter.svg");
 }
 .facebook .social_div {
-    background-image: url("../img/social-facebook.svg");
+	background-image: url("../img/social-facebook.svg");
 }
 .youtube .social_div {
-    background-image: url("../img/social-youtube.svg");
+	background-image: url("../img/social-youtube.svg");
 }
 
 /*---------------Контакты----------------*/
-
 .contacts_phone {
-    font-size: 40px;
-    line-height: 40px;
-    color: #000000;
-    font-style: normal;
-    text-decoration: none;
-    padding: 15px;
+	font-size: 40px;
+	line-height: 40px;
+	color: #000000;
+	font-style: normal;
+	text-decoration: none;
+	padding: 15px;
 }
 .contacts_phone:hover {
-    color: #756257;
+	color: #756257;
 }
 .contacts_phone:focus {
-    color: #756257;
-    border: 3px solid #83B3D3;
-    border-radius: 10px;
+	color: #756257;
+	border: 3px solid #83B3D3;
+	border-radius: 10px;
 }
 .contacts_phone:active {
-    color: #756257;
-    opacity: 0.3;
+	color: #756257;
+	opacity: 0.3;
 }
 /*------------Логотип htmlacademy-----------*/
-
+.htmlacademy_logo_link_img {
+	width: 120px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("../img/logo_htmlacademy.svg");
+}
