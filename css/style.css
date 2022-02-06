@@ -176,10 +176,16 @@ body {
 	background-image: url("../img/index-background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: #333333;
 }
 .welcome {
 	padding-top: 51px;
 	text-align: center;
+	height: 377px;
+}
+.welcome img {
+	height: auto;
+	width: auto;
 }
 .divider {
 	height: 57px;
