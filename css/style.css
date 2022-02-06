@@ -220,13 +220,13 @@ body {
 .duble_one {
 	background-image: url(../img/photo-1.jpg);
 	background-repeat: no-repeat;
-	background-size: 100% auto;
+	background-size: cover;
 }
 
 .duble_two {
 	background-image: url(../img/photo-2.jpg);
 	background-repeat: no-repeat;
-	background-size: 100% auto;
+	background-size: cover;
 }
 .first_line_first_slot,
 .three_line_three_slot {
@@ -450,5 +450,5 @@ body {
 	height: 40px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-image: url("../img/logo_htmlacademy.svg");
+	background-image: url("../img/logo-htmlacademy.svg");
 }
