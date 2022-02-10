@@ -238,36 +238,45 @@ ul.navigation_right_menu {
 
 /*-----------Преимущества--------*/
 /* (список выровнен для удобства просмотра) */
-.benefits_content {
+/*.benefits_content {
 	text-align: center;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+}*/
+.benefits_content {
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(4, 384px);
 }
-
+/*
+использовальсь раньше для дисплей флекс
 .benefits_content_item {
-	width: 400px;
-	height: 384px;
+	height: 400px;
+	min-height: 384px;
 }
-
-
 .benefits_content_item_duble {
-	width: 800px;
-	height: 384px;
-}
+	height: 800px;
+	min-height: 384px;
+}*/
 
 .duble_one {
 	background-image: url(../img/photo-1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	grid-column-start: 2;
+	grid-column-end: 4;
 }
 
 .duble_two {
 	background-image: url(../img/photo-2.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	grid-column-start: 1;
+	grid-column-end: 3;
 }
 .first_line_first_slot,
 .three_line_three_slot {
@@ -384,7 +393,7 @@ ul.navigation_right_menu {
 	background-size: cover;
 	color: white;
 	background-color: darkcyan;
-	padding: 94px 200px;
+	padding: 94px;
 }
 .subscribe .h2_p {
 	margin-block-start: 0px;
