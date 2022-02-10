@@ -24,6 +24,19 @@ body {
 	padding: 0;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
+	background: #E5E5E5;
+	height: 100%;
+
+}
+
+.body_container {
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: white;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+
+	display: flex;
+	flex-direction: column;
 }
 
 /*--Скрытый элемент--*/
@@ -81,9 +94,6 @@ body {
 	margin-block-end: 56px;
 }
 
-.subscribe .h2_p {
-	margin-block-end: 46px;
-}
 
 /*содержимое элемента в центре */
 .center {
@@ -92,21 +102,41 @@ body {
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
+	/*flex-grow: 1;*/
 }
 
 
 
 /*-------- ХЕДЕР --------*/
+.navigation {
+	display: flex;
+}
 
 .img_logo {
-	position: absolute;
+	/*position: absolute;
 	left: 70px;
-	right: 86.89%;
+	right: 86.89%; временно убрано*/
 	top: 0%;
+	margin-left: 70px;
 	width: 139px;
 	height: 70px;
 }
+/*расположение левого и правого меню*/
+.main-header ul { 
+	list-style: none;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	padding-inline-start: 0px;
+}
 
+ul.navigation_main_menu {
+	margin-left: 30px;
+}
+
+ul.navigation_right_menu {
+	margin-right: 70px;
+	margin-left: auto;
+}
 /*ссылки в навигационном меню1*/
 .navigation_link{
 	font-weight: bold;
@@ -120,6 +150,7 @@ body {
 }
 
 /*ссылки в навигационном меню 2*/
+
 .navigation_link_div {
 	width: 42px;
 	height: 42px;
@@ -164,6 +195,7 @@ body {
 	line-height: 20px;
 	text-transform: uppercase;
 	color: white;
+	border-radius: 4px;
 }
 
 
@@ -171,7 +203,9 @@ body {
 
 
 /*-------- МЕЙН --------*/
-
+.main_index {
+	flex-grow: 1;
+}
 .first_screen1 {
 	background-image: url("../img/index-background.jpg");
 	background-repeat: no-repeat;
@@ -180,12 +214,13 @@ body {
 }
 .welcome {
 	padding-top: 51px;
+	padding-bottom: 25px;
 	text-align: center;
-	height: 377px;
 }
 .welcome img {
-	height: auto;
-	width: auto;
+	width: 458px;
+	height: 352px;
+	vertical-align: middle;
 }
 .divider {
 	height: 57px;
@@ -290,7 +325,7 @@ body {
 
 
 /*убрать точки и отступы из списка*/
-.main-header ul, .benefits ul, .main-footer ul { 
+.benefits ul, .main-footer ul { 
 	list-style: none;
 	margin-block-start: 0px;
 	margin-block-end: 0px;
@@ -301,7 +336,7 @@ body {
 
 /*--------------Поиск гостиницы-----------*/
 .search {
-	height: 417px;
+	min-height: 417px;
 }
 .buttom_brown {
 	font-weight: bold;
@@ -324,6 +359,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center
+
 	
 }
 /*анимация для коричневых кнопок*/
@@ -332,7 +368,9 @@ body {
 }
 .buttom_brown_div:focus {
 	background: #615048;
-	border: 3px solid #83B3D3;
+	/*border: 3px solid #83B3D3; используются тени для того что бы контент не уезжал*/
+	outline: none;
+	box-shadow: 0 0 0 3px #83B3D3;
 }
 .buttom_brown_div:active{
 	background: #615048;
@@ -340,21 +378,36 @@ body {
 }
 /*-------------------Рассылка-----------------*/
 .subscribe {
-	height: 411px;
+	/*min-height: 411px; убрано для вывнивания отступов паддингом*/
 	background-image: url("../img/background2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
 	background-color: darkcyan;
+	padding: 94px 200px;
 }
 .subscribe .h2_p {
+	margin-block-start: 0px;
+	margin-block-end: 46px;
 	color: white;
+}
+
+.subscribe .h2 {
+	margin-block-start: 0px;
+	margin-block-end: 29px;
 }
 
 .email {
 	display: flex; /*схлопывает input и button*/
 	align-content: center;
 	justify-content: center;
+	width: 100%;
+}
+.email label {
+	cursor: default;
+	display: -webkit-flex;
+	max-width: 600px;
+	width: 100%;
 }
 .email input[type="email"] {
 	font-family: PT Sans;
@@ -367,7 +420,7 @@ body {
 	border: none;
 	border-radius: 10px 0px 0px 10px;
 	height: 60px;
-	width: 600px;
+	width: 100%;
 	padding: 0px 22px 0px 19px;
 }
 
@@ -382,7 +435,8 @@ body {
 	border: none;
 	border-radius: 0px 10px 10px 0px;
 	height: 60px;
-	width: 200px;
+	min-width: 200px;
+	margin-left: 0px;
 }
 
 
@@ -393,9 +447,9 @@ body {
 .main-footer {
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-items: center;
-	height: 120px;
+	min-height: 120px;
 	align-content: center;
 	flex-direction: row;
 }
@@ -430,6 +484,10 @@ body {
 }
 
 /*---------------Контакты----------------*/
+.contacts{
+	width: 100%;
+	max-width: 720px;
+}
 .contacts_phone {
 	font-size: 40px;
 	line-height: 40px;
