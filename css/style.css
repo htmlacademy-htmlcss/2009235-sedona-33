@@ -26,7 +26,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	background: #E5E5E5;
 	height: 100%;
-
 }
 
 .body_container {
@@ -37,6 +36,7 @@ body {
 
 	display: flex;
 	flex-direction: column;
+	min-height: 100vh;
 }
 
 /*--Скрытый элемент--*/
@@ -66,6 +66,7 @@ body {
 	color: #333333;
 	text-align: center;
 	font-weight: normal;
+
 }
 .h3_p {
 	font-size: 18px;
@@ -113,9 +114,8 @@ body {
 }
 
 .img_logo {
-	/*position: absolute;
-	left: 70px;
-	right: 86.89%; временно убрано*/
+	position: absolute;
+
 	top: 0%;
 	margin-left: 70px;
 	width: 139px;
@@ -130,27 +130,54 @@ body {
 }
 
 ul.navigation_main_menu {
-	margin-left: 30px;
+	margin-left: 239px;
 }
 
 ul.navigation_right_menu {
 	margin-right: 70px;
 	margin-left: auto;
 }
+
+
+
 /*ссылки в навигационном меню1*/
-.navigation_link{
+.navigation_main_menu {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	padding: 0;
+	margin: 0;
+	max-width: 600px;
+}
+.navigation_main_menu .navigation_item {
+	margin: 0px 17px;
+}
+.navigation_main_menu .navigation_link{
 	font-weight: bold;
 	font-size: 20px;
 	line-height: 26px;
 	color: black;
 	text-decoration: none;
+
+	display: block;
+	padding: 20px 0px 18px 0px;
+	
 }
-.navigation_link_current {
+.navigation_main_menu .navigation_link_current {
 	border-bottom: 2px solid #756257;
+	
 }
 
 /*ссылки в навигационном меню 2*/
-
+.navigation_right_menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
 .navigation_link_div {
 	width: 42px;
 	height: 42px;
@@ -160,7 +187,7 @@ ul.navigation_right_menu {
 .navigation_link_div.top_search {
 	background-image: url(../img/search.svg);
 }
-
+/*---  <3  ---*/
 .navigation_link_div.like {
 	background-image: url(../img/favorite.svg);
 }
@@ -185,9 +212,9 @@ ul.navigation_right_menu {
 	float: right;
 }
 
-
 /*Кнопкa в меню2*/
 .navigation_item .buttom_brown_div {
+	margin-left: 20px;
 	height: 37px;
 	width: 160px;
 	font-weight: bold;
@@ -218,8 +245,9 @@ ul.navigation_right_menu {
 	text-align: center;
 }
 .welcome img {
-	width: 458px;
-	height: 352px;
+	max-width: 458px;
+	width: 100%;
+	height: auto;
 	vertical-align: middle;
 }
 .divider {
@@ -233,7 +261,8 @@ ul.navigation_right_menu {
 	line-height: 36px;
 }
 .first_screen2 {
-	min-height: 282px;
+	/*min-height: 282px;*/
+	padding: 48px 0px 66px 0px;
 }
 
 /*-----------Преимущества--------*/
@@ -252,15 +281,17 @@ ul.navigation_right_menu {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: repeat(4, 384px);
 }
-/*
-использовальсь раньше для дисплей флекс
+
+/*использовальсь раньше для дисплей флекс
 .benefits_content_item {
-	height: 400px;
+	width: 33%;
 	min-height: 384px;
+	flex-grow: 1;
 }
 .benefits_content_item_duble {
-	height: 800px;
+	width: 63%;
 	min-height: 384px;
+	flex-grow: 2;
 }*/
 
 .duble_one {
@@ -285,7 +316,7 @@ ul.navigation_right_menu {
 }
 .first_line_first_slot .h3_p,
 .three_line_three_slot .h3_p {
-	width: 220px;
+	max-width: 220px;
 	color: #FFFFFF;;
 }
 .two_line_first_slot,
@@ -298,7 +329,7 @@ ul.navigation_right_menu {
 .four_line_first_slot .h3_p,
 .four_line_two_slot .h3_p,
 .four_line_three_slot .h3_p{
-	width: 250px;
+	max-width: 250px;
 }
 
 .four_line_two_slot {
@@ -309,7 +340,7 @@ ul.navigation_right_menu {
 .two_line_first_slot .h3_p,
 .two_line_two_slot .h3_p,
 .two_line_three_slot .h3_p {
-	width: 250px;
+	max-width: 250px;
 	margin-block-start: 10px;
 	margin-block-end: 10px;
 }
@@ -345,7 +376,8 @@ ul.navigation_right_menu {
 
 /*--------------Поиск гостиницы-----------*/
 .search {
-	min-height: 417px;
+	/*min-height: 417px;*/
+	padding: 76px 0px 93px 0px;
 }
 .buttom_brown {
 	font-weight: bold;
@@ -355,10 +387,14 @@ ul.navigation_right_menu {
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
+	display: block;
+	width: 100%;
 }
 .buttom_brown .buttom_brown_div {
 	height: 60px;
-	width: 575px;
+	width: 98%;
+	max-width: 575px;
+	margin: 0 auto;
 }
 .buttom_brown_div {
 	background: #756257;
@@ -393,7 +429,8 @@ ul.navigation_right_menu {
 	background-size: cover;
 	color: white;
 	background-color: darkcyan;
-	padding: 94px;
+	padding: 94px 0px;
+	flex-grow: 1;
 }
 .subscribe .h2_p {
 	margin-block-start: 0px;
@@ -410,7 +447,7 @@ ul.navigation_right_menu {
 	display: flex; /*схлопывает input и button*/
 	align-content: center;
 	justify-content: center;
-	width: 100%;
+	width: 98%;
 }
 .email label {
 	cursor: default;
