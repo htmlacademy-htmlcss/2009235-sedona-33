@@ -450,12 +450,7 @@ ul.navigation_right_menu {
 	justify-content: center;
 	width: 98%;
 }
-.email label {
-	cursor: default;
-	display: -webkit-flex;
-	max-width: 600px;
-	width: 100%;
-}
+
 .email input[type="email"] {
 	font-family: PT Sans;
 	font-style: normal;
@@ -467,8 +462,11 @@ ul.navigation_right_menu {
 	border: none;
 	border-radius: 10px 0px 0px 10px;
 	height: 60px;
-	width: 100%;
 	padding: 0px 22px 0px 19px;
+	cursor: default;
+	max-width: 600px;
+	flex-grow: 1;
+	margin-right: 0px;
 }
 
 .email button[type="submit"] {
@@ -484,6 +482,7 @@ ul.navigation_right_menu {
 	height: 60px;
 	min-width: 200px;
 	margin-left: 0px;
+	flex-shrink:0;
 }
 
 
