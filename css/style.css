@@ -24,6 +24,20 @@ body {
 	padding: 0;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
+	background: #E5E5E5;
+	height: 100%;
+}
+
+.body_container {
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: white;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 /*--Скрытый элемент--*/
@@ -53,6 +67,7 @@ body {
 	color: #333333;
 	text-align: center;
 	font-weight: normal;
+
 }
 .h3_p {
 	font-size: 18px;
@@ -81,9 +96,6 @@ body {
 	margin-block-end: 56px;
 }
 
-.subscribe .h2_p {
-	margin-block-end: 46px;
-}
 
 /*содержимое элемента в центре */
 .center {
@@ -92,34 +104,81 @@ body {
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
+	/*flex-grow: 1;*/
 }
 
 
 
 /*-------- ХЕДЕР --------*/
+.navigation {
+	display: flex;
+}
 
 .img_logo {
 	position: absolute;
-	left: 70px;
-	right: 86.89%;
+
 	top: 0%;
+	margin-left: 70px;
 	width: 139px;
 	height: 70px;
 }
+/*расположение левого и правого меню*/
+.main-header ul { 
+	list-style: none;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	padding-inline-start: 0px;
+}
+
+ul.navigation_main_menu {
+	margin-left: 239px;
+}
+
+ul.navigation_right_menu {
+	margin-right: 70px;
+	margin-left: auto;
+}
+
+
 
 /*ссылки в навигационном меню1*/
-.navigation_link{
+.navigation_main_menu {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	padding: 0;
+	margin: 0;
+	max-width: 600px;
+}
+.navigation_main_menu .navigation_item {
+	margin: 0px 17px;
+}
+.navigation_main_menu .navigation_link{
 	font-weight: bold;
 	font-size: 20px;
 	line-height: 26px;
 	color: black;
 	text-decoration: none;
+
+	display: block;
+	padding: 20px 0px 18px 0px;
+	
 }
-.navigation_link_current {
+.navigation_main_menu .navigation_link_current {
 	border-bottom: 2px solid #756257;
+	
 }
 
 /*ссылки в навигационном меню 2*/
+.navigation_right_menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
 .navigation_link_div {
 	width: 42px;
 	height: 42px;
@@ -129,7 +188,7 @@ body {
 .navigation_link_div.top_search {
 	background-image: url(../img/search.svg);
 }
-
+/*---  <3  ---*/
 .navigation_link_div.like {
 	background-image: url(../img/favorite.svg);
 }
@@ -154,9 +213,9 @@ body {
 	float: right;
 }
 
-
 /*Кнопкa в меню2*/
 .navigation_item .buttom_brown_div {
+	margin-left: 20px;
 	height: 37px;
 	width: 160px;
 	font-weight: bold;
@@ -164,6 +223,7 @@ body {
 	line-height: 20px;
 	text-transform: uppercase;
 	color: white;
+	border-radius: 4px;
 }
 
 
@@ -171,7 +231,9 @@ body {
 
 
 /*-------- МЕЙН --------*/
-
+.main_index {
+	flex-grow: 1;
+}
 .first_screen1 {
 	background-image: url("../img/index-background.jpg");
 	background-repeat: no-repeat;
@@ -180,12 +242,14 @@ body {
 }
 .welcome {
 	padding-top: 51px;
+	padding-bottom: 25px;
 	text-align: center;
-	height: 377px;
 }
 .welcome img {
+	max-width: 458px;
+	width: 100%;
 	height: auto;
-	width: auto;
+	vertical-align: middle;
 }
 .divider {
 	height: 57px;
@@ -198,41 +262,53 @@ body {
 	line-height: 36px;
 }
 .first_screen2 {
-	min-height: 282px;
+	/*min-height: 282px;*/
+	padding: 48px 0px 66px 0px;
 }
 
 /*-----------Преимущества--------*/
 /* (список выровнен для удобства просмотра) */
-.benefits_content {
+/*.benefits_content {
 	text-align: center;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+}*/
+.benefits_content {
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(4, 384px);
 }
 
+/*использовальсь раньше для дисплей флекс
 .benefits_content_item {
-	width: 400px;
-	height: 384px;
+	width: 33%;
+	min-height: 384px;
+	flex-grow: 1;
 }
-
-
 .benefits_content_item_duble {
-	width: 800px;
-	height: 384px;
-}
+	width: 63%;
+	min-height: 384px;
+	flex-grow: 2;
+}*/
 
 .duble_one {
 	background-image: url(../img/photo-1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	grid-column-start: 2;
+	grid-column-end: 4;
 }
 
 .duble_two {
 	background-image: url(../img/photo-2.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	grid-column-start: 1;
+	grid-column-end: 3;
 }
 .first_line_first_slot,
 .three_line_three_slot {
@@ -241,7 +317,7 @@ body {
 }
 .first_line_first_slot .h3_p,
 .three_line_three_slot .h3_p {
-	width: 220px;
+	max-width: 220px;
 	color: #FFFFFF;;
 }
 .two_line_first_slot,
@@ -254,7 +330,7 @@ body {
 .four_line_first_slot .h3_p,
 .four_line_two_slot .h3_p,
 .four_line_three_slot .h3_p{
-	width: 250px;
+	max-width: 250px;
 }
 
 .four_line_two_slot {
@@ -265,7 +341,7 @@ body {
 .two_line_first_slot .h3_p,
 .two_line_two_slot .h3_p,
 .two_line_three_slot .h3_p {
-	width: 250px;
+	max-width: 250px;
 	margin-block-start: 10px;
 	margin-block-end: 10px;
 }
@@ -290,7 +366,7 @@ body {
 
 
 /*убрать точки и отступы из списка*/
-.main-header ul, .benefits ul, .main-footer ul { 
+.benefits ul, .main-footer ul { 
 	list-style: none;
 	margin-block-start: 0px;
 	margin-block-end: 0px;
@@ -301,7 +377,8 @@ body {
 
 /*--------------Поиск гостиницы-----------*/
 .search {
-	height: 417px;
+	/*min-height: 417px;*/
+	padding: 76px 0px 93px 0px;
 }
 .buttom_brown {
 	font-weight: bold;
@@ -311,10 +388,14 @@ body {
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
+	display: block;
+	width: 100%;
 }
 .buttom_brown .buttom_brown_div {
 	height: 60px;
-	width: 575px;
+	width: 98%;
+	max-width: 575px;
+	margin: 0 auto;
 }
 .buttom_brown_div {
 	background: #756257;
@@ -324,6 +405,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center
+
 	
 }
 /*анимация для коричневых кнопок*/
@@ -332,7 +414,9 @@ body {
 }
 .buttom_brown_div:focus {
 	background: #615048;
-	border: 3px solid #83B3D3;
+	/*border: 3px solid #83B3D3; используются тени для того что бы контент не уезжал*/
+	outline: none;
+	box-shadow: 0 0 0 3px #83B3D3;
 }
 .buttom_brown_div:active{
 	background: #615048;
@@ -340,21 +424,37 @@ body {
 }
 /*-------------------Рассылка-----------------*/
 .subscribe {
-	height: 411px;
+	/*min-height: 411px; убрано для вывнивания отступов паддингом*/
 	background-image: url("../img/background2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
 	background-color: darkcyan;
+	padding: 94px 0px;
+	flex-grow: 1;
 }
 .subscribe .h2_p {
+	margin-block-start: 0px;
+	margin-block-end: 46px;
 	color: white;
+}
+
+.subscribe .h2 {
+	margin-block-start: 0px;
+	margin-block-end: 29px;
 }
 
 .email {
 	display: flex; /*схлопывает input и button*/
 	align-content: center;
 	justify-content: center;
+	width: 98%;
+}
+.email label {
+	cursor: default;
+	display: -webkit-flex;
+	max-width: 600px;
+	width: 100%;
 }
 .email input[type="email"] {
 	font-family: PT Sans;
@@ -367,7 +467,7 @@ body {
 	border: none;
 	border-radius: 10px 0px 0px 10px;
 	height: 60px;
-	width: 600px;
+	width: 100%;
 	padding: 0px 22px 0px 19px;
 }
 
@@ -382,7 +482,8 @@ body {
 	border: none;
 	border-radius: 0px 10px 10px 0px;
 	height: 60px;
-	width: 200px;
+	min-width: 200px;
+	margin-left: 0px;
 }
 
 
@@ -393,9 +494,9 @@ body {
 .main-footer {
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-items: center;
-	height: 120px;
+	min-height: 120px;
 	align-content: center;
 	flex-direction: row;
 }
@@ -430,6 +531,10 @@ body {
 }
 
 /*---------------Контакты----------------*/
+.contacts{
+	width: 100%;
+	max-width: 720px;
+}
 .contacts_phone {
 	font-size: 40px;
 	line-height: 40px;
