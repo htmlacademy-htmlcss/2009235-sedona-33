@@ -42,7 +42,14 @@ body {
 
 /*--Скрытый элемент--*/
 .visually-hidden {
-	display: none;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 
@@ -104,7 +111,6 @@ body {
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-	/*flex-grow: 1;*/
 }
 
 
@@ -174,14 +180,28 @@ ul.navigation_right_menu {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-content: center;
+	align-content: space-evenly;
 	align-items: center;
 	padding: 0;
 	margin: 0;
 }
+
+.navigation_right_menu .navigation_link {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 26px;
+	color: black;
+	text-decoration: none;
+	display: block;
+	padding: 12px 5px;
+}
+.navigation_right_menu .navigation_item {
+	margin: 0px 0px;
+}
+
 .navigation_link_div {
-	width: 42px;
-	height: 42px;
+	min-width: 32px;
+	min-height: 42px;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -208,7 +228,7 @@ ul.navigation_right_menu {
 	background-color: #7DB54F;
 	width: 20px;
 	height: 20px;
-	margin-right: -3px;
+	margin-right: -8px;
 	margin-top: 6px;
 	float: right;
 }
@@ -262,38 +282,25 @@ ul.navigation_right_menu {
 	line-height: 36px;
 }
 .first_screen2 {
-	/*min-height: 282px;*/
 	padding: 48px 0px 66px 0px;
 }
 
 /*-----------Преимущества--------*/
-/* (список выровнен для удобства просмотра) */
-/*.benefits_content {
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}*/
+
 .benefits_content {
 	text-align: center;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: repeat(4, 384px);
 }
 
-/*использовальсь раньше для дисплей флекс
-.benefits_content_item {
-	width: 33%;
-	min-height: 384px;
-	flex-grow: 1;
-}
+
 .benefits_content_item_duble {
-	width: 63%;
 	min-height: 384px;
-	flex-grow: 2;
-}*/
+}
+.benefits_content_item {
+	min-height: 236px;
+	padding: 74px 0px;
+}
 
 .duble_one {
 	background-image: url(../img/photo-1.jpg);
@@ -377,7 +384,6 @@ ul.navigation_right_menu {
 
 /*--------------Поиск гостиницы-----------*/
 .search {
-	/*min-height: 417px;*/
 	padding: 76px 0px 93px 0px;
 }
 .buttom_brown {
@@ -424,7 +430,6 @@ ul.navigation_right_menu {
 }
 /*-------------------Рассылка-----------------*/
 .subscribe {
-	/*min-height: 411px; убрано для вывнивания отступов паддингом*/
 	background-image: url("../img/background2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -450,12 +455,7 @@ ul.navigation_right_menu {
 	justify-content: center;
 	width: 98%;
 }
-.email label {
-	cursor: default;
-	display: -webkit-flex;
-	max-width: 600px;
-	width: 100%;
-}
+
 .email input[type="email"] {
 	font-family: PT Sans;
 	font-style: normal;
@@ -467,8 +467,11 @@ ul.navigation_right_menu {
 	border: none;
 	border-radius: 10px 0px 0px 10px;
 	height: 60px;
-	width: 100%;
 	padding: 0px 22px 0px 19px;
+	cursor: default;
+	max-width: 600px;
+	flex-grow: 1;
+	margin-right: 0px;
 }
 
 .email button[type="submit"] {
@@ -484,6 +487,7 @@ ul.navigation_right_menu {
 	height: 60px;
 	min-width: 200px;
 	margin-left: 0px;
+	flex-shrink:0;
 }
 
 
@@ -496,9 +500,9 @@ ul.navigation_right_menu {
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
 	align-items: center;
-	min-height: 120px;
 	align-content: center;
 	flex-direction: row;
+	padding: 40px 0px;
 }
 
 .footer_center {
@@ -513,6 +517,12 @@ ul.navigation_right_menu {
 .social_list {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: 120px;
+}
+.social_item{
+	min-width: 40px;
+	min-height: 40px;
 }
 .social_div {
 	background-repeat: no-repeat;
