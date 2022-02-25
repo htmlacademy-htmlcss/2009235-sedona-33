@@ -23,9 +23,19 @@ body {
 	line-height: 26px;
 	padding: 0;
 	margin: 0;
-	-webkit-font-smoothing: antialiased;
 	background: #E5E5E5;
 	height: 100%;
+	/*Сглаживание текста*/
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .body_container {
@@ -270,6 +280,7 @@ ul.navigation_right_menu {
 	color: white;
 	border-radius: 4px;
 	outline: none;
+	padding: 0;
 }
 
 
