@@ -269,6 +269,7 @@ ul.navigation_right_menu {
 	text-transform: uppercase;
 	color: white;
 	border-radius: 4px;
+	outline: none;
 }
 
 
@@ -551,6 +552,8 @@ ul.navigation_right_menu {
 	min-width: 200px;
 	margin-left: 0px;
 	flex-shrink:0;
+	padding: 0;
+	outline: none;
 }
 
 .email button[type="submit"]:hover {
