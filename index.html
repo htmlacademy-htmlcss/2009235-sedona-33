@@ -161,7 +161,8 @@
 			<p class="h2_p">Только полезная информация и никакого спама,<br>
 				честное бойскаутское!</p>
 			<form  class="email" action="https://echo.htmlacademy.ru/" method="post">
-				<input type="email" name="E-mail" placeholder="Ваш e-mail" required autocomplete="on">
+				<label class="visually-hidden" for="newsletter-email">Email</label>
+				<input type="email" name="newsletter-email" id="newsletter-email" placeholder="Ваш e-mail" required autocomplete="on">
 				<button type="submit">Подписаться</button>
 			</form>
 		</section>
@@ -215,6 +216,56 @@
 				</a>
 			</section>
 		</footer>
+
+		<!-- Модальное окно -->
+		<div class="modal-container">
+			<div class="modal modal-search">
+				<button class="close">
+					<span class="visually-hidden">Закрыть окно</span>
+				</button>
+				<h2 class="h2">Поиск гостиницы в Седоне</h2>
+
+				<form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+					<p>
+						<label for="start">Дата заезда:</label>
+						<input type="date" value="2022-01-22" id="start" min="2018-07-22" name="datein">
+						Мы не можем отправить вас в прошлое.
+					</p>
+					<p>
+						<label for="finish">Дата выезда:</label>
+						<input type="date" value="2022-01-23" id="finish" name="dateout">
+						На эти даты есть свободные номера. Пока есть.
+					</p>
+					<p>
+						<label>Взрослые:
+						<input type="number" value="1" min="1">
+						</label>
+						
+						<div class="count">
+							<lable for="peple_count">Взрослые:</lable>
+							<button class="back" type="button">
+								<span class="visually-hidden">Уменьшить на одного</span>
+							</button>
+							<input type="text" id="peple_count" value="1">
+							<button class="next" type="button">
+								<span class="visually-hidden">Увеличить на одного</span>
+							</button>
+						</div>
+
+						<label for="children_count">Дети:</label>
+						<button class="dop_info" type="" alt="Дополнительная информация">i
+								<span class="visually-hidden">Посмотреть дополнительную информацию</span>
+						</button>
+						<div class="dop_info_bloc">
+							<p>Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+								Дети до 6 лет размещаются бесплатно.</p>
+						</div>
+						<input type="number" value="0" min="0" id="children_count">
+					</p>
+					<button type="submit">Найти</button>
+				</form>
+			</div>
+		</div>
 	</div>
 </body>
 
