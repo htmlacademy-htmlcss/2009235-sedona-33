@@ -816,13 +816,9 @@ ul.navigation_right_menu {
 	margin: 0px;
 	box-sizing: border-box;
 	outline: none;
-	background-image: url(../img/date-copy.svg);
-	background-repeat: no-repeat;
-	background-size: auto;
-	background-position: right 19px center;
 }
-/*добаление иконки календаря если не менять прозрачность svg в его файле*/
-/*.date_div::before {
+
+.date_div::before {
 	content: "";
 	position: absolute;
 	width: 16px;
@@ -835,7 +831,8 @@ ul.navigation_right_menu {
 	opacity: 0.6;
 	top: 50%;
 	transform: translateY(-50%);
-}*/
+
+}
    
 .date_input:hover {
 	background-color: #E6E6E6;
