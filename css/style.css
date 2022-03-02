@@ -506,6 +506,7 @@ ul.navigation_right_menu {
 	width: 98%;
 }
 
+
 .email input[type="email"] {
 	font-family: PT Sans;
 	font-style: normal;
@@ -518,7 +519,6 @@ ul.navigation_right_menu {
 	border-radius: 10px 0px 0px 10px;
 	height: 60px;
 	padding: 0px 22px 0px 19px;
-	cursor: default;
 	max-width: 600px;
 	flex-grow: 1;
 	margin-right: 0px;
@@ -541,7 +541,7 @@ ul.navigation_right_menu {
 	border: 2px solid #FF5757;
 	padding-left: 17px;
 	outline: none;
-	/*box-shadow:	0 0 0 3px #83B3D3,	inset 0 0 0 2px #FF5757;*/
+	/*box-shadow: inset 0 0 0 2px #FF5757; шкалит!*/
 }
 
 
@@ -550,34 +550,37 @@ ul.navigation_right_menu {
 }
 
 .email button[type="submit"] {
+	border-radius: 0px 10px 10px 0px;
+	min-width: 200px;
+	flex-shrink:0;
+}
+
+.blue_button {
 	font-weight: bold;
 	font-size: 20px;
 	line-height: 26px;
 	text-transform: uppercase;
+	height: 60px;
 	color: white;
 	cursor: pointer;
 	background: #83B3D3;
 	border: none;
-	border-radius: 0px 10px 10px 0px;
-	height: 60px;
-	min-width: 200px;
-	margin-left: 0px;
-	flex-shrink:0;
+	margin: 0px;
 	padding: 0;
 	outline: none;
 }
 
-.email button[type="submit"]:hover {
+.blue_button:hover {
 	background: #68A2CA;
 }
 
-.email button[type="submit"]:focus {
+.blue_button:focus {
 	background: #68A2CA;
 	outline: none;
 	box-shadow: 0 0 0 3px #756257;
 }
 
-.email button[type="submit"]:active {
+.blue_button:active {
 	background: #68A2CA;
 	color: rgba(255, 255, 255, 0.3);
 }
@@ -706,9 +709,15 @@ ul.navigation_right_menu {
 	opacity: 0.3;
 }
 
+
+
+
+
+
 /*-------- МОДАЛЬНОЕ ОКНО --------*/
 .modal-container {
 	position: fixed;
+	z-index: 2;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -717,10 +726,333 @@ ul.navigation_right_menu {
 	background-color: rgba(242, 242, 242, 0.8);
 }
 
+.modal-container-close {
+	display: none;
+}
+
 .modal {
 	position: relative;
 	margin: auto;
 	padding: 62px 70px 70px 70px;
 	background-color: #ffffff;
 	border-radius: 30px;
-  }
+}
+
+.modal-search {
+	box-sizing: border-box;
+	width: 715px;
+}
+/* кнопка закрытия модального окна */
+.close_window {
+	position: absolute;
+	padding: 0;
+	top: 54px;
+	right: 70px;
+	width: 53px;
+	height: 53px;
+	border-radius: 50%;
+	background-color: #F2F2F2;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	box-shadow: none;
+}
+.close_window svg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	fill: #000000;	
+}
+.close_window:hover {
+	background-color: #E6E6E6;
+}
+
+.close_window:focus {
+	background-color: #E6E6E6;
+	box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.close_window:active {
+	background-color: #E6E6E6;
+}
+.close_window:active svg {
+	opacity: 0.3;
+}
+
+/*-------*/
+
+.modal .h2 {
+	margin-block-start: 0px;
+	margin-block-end: 59px;
+	text-align: left;
+	line-height: 40px;
+	padding-right: 60px; /*padding for close button*/
+}
+
+.modal_form_label,
+.modal-form input {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 40px;
+	color: #000000;
+}
+
+.modal_form_label {
+	padding: 0;
+	margin: 5px 0 auto 0;
+}
+
+/*------*/
+.date_input {
+	border: none;
+	background-color: #F2F2F2;
+	border-radius: 4px;
+	height: 50px;
+	padding: 0px 54px 0px 19px;
+	margin: 0px;
+	box-sizing: border-box;
+	outline: none;
+	background-image: url(../img/date-copy.svg);
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: right 19px center;
+}
+/*добаление иконки календаря если не менять прозрачность svg в его файле*/
+/*.date_div::before {
+	content: "";
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	right: 19px;
+	background-image: url(../img/date-ico.svg);
+	background-size: 16px 15px;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.6;
+	top: 50%;
+	transform: translateY(-50%);
+}*/
+   
+.date_input:hover {
+	background-color: #E6E6E6;
+}
+
+.date_input:focus {
+	background-color: #E6E6E6;
+	box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.date_input:active{
+	background: #FFFFFF;
+	border: 2px solid #000000;
+	padding-left: 17px;
+}
+
+
+.date_div {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin: 0;
+}
+
+.vaild-ivalid_date {
+	font-size: 16px;
+	line-height: 40px;
+	display: block;
+	background-color: transparent;
+	margin-top: -7px;
+	position: absolute;
+	top: 100%;
+}
+
+
+.date_input:invalid + .vaild-ivalid_date::before {
+    content: 'Мы не можем отправить вас в прошлое.';
+    color: #FF5757;
+}
+
+.date_input:valid + .vaild-ivalid_date::before {
+    content: 'На эти даты есть свободные номера. Пока есть.';
+    color:#000000;
+}
+
+/* + 12 - */
+.count {
+	height: 50px;
+	background: #F2F2F2;
+	border-radius: 4px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+
+}
+
+.back, .next {
+	width: 25px;
+	height: 25px;
+	padding: 0;
+	border-radius: 4px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	box-shadow: none;
+	position: relative;
+	opacity: 0.6;
+}
+
+
+.back::before, .next::after, .next::before {
+	position: absolute;
+	top: 12px;
+	left: 6px;
+	width: 13px;
+	height: 1px;
+	background-color: #242424;
+	content: "";
+}
+
+.next::after {
+	transform: rotate(-90deg);
+}
+
+.back:hover, .next:hover {
+	opacity: 1;
+}
+
+.back:focus, .next:focus {
+	opacity: 1;
+	box-shadow: inset 0 0 0 3px #83B3D3;
+}
+
+.back:active, .next:active {
+	opacity: 0.3;
+}
+
+.count input[type="number"] {
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	position: relative;
+	width: 25px; /*!!!! будет видно только двухзначное число!!!*/
+	text-align: center;
+}
+
+.count input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.count input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+/*-----  i  -----*/
+.dop_info {
+	width: 25px;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+	border-radius: 50%;
+	background-color: #83B3D3;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	box-shadow: none;
+	background-image: url(../img/info.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto;
+	display: block;
+}
+
+.dop_info:hover, .dop_info:focus {
+	background-color: #68A2CA;
+}
+
+.tooltip-text {
+	width: 256px;
+	box-sizing: border-box;
+	padding: 20px 18px 23px 22px;
+	background-color: #333333;
+	border-radius: 10px;
+	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 20px;	
+	font-weight: normal;
+	text-transform: none;
+	display: block;
+	position: absolute;
+	top:40px;
+	left: -115.5px;
+	transform: translateX(-50%);
+	left: 50%;
+	display: none;
+}
+.tooltip-text:after {
+	content:'';
+	background-image: url("../img/triangle.svg");
+	width: 19px;
+	height: 8px; /*-1px поскольку не доконца прилегает*/
+	position:absolute;
+	transform: rotate(0deg);
+	bottom: 100%;
+	left:0;
+	right:0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tooltip {
+	/*position: absolute;
+	margin-top: 7.5px;
+	margin-left: 10px; если абсолютное положение*/
+	margin-left: 5px;
+	position: relative;
+	display: inline-block;
+	transform: translateY(-25%);
+}
+
+.dop_info:hover + .tooltip-text,
+.dop_info:focus + .tooltip-text {
+  display: block;
+}
+
+/*------кнопка найти-------*/
+.modal-form button[type="submit"] {
+	border-radius: 10px;
+	width: 100%;
+	grid-column: 1/-1;
+}
+
+.modal-form {
+	display: grid;
+	row-gap: 40px;
+	grid-template-columns: 27% 23.2% 26.6% 23.2%;
+	/* исходные значения из макета */
+	/*grid-template-columns: 155px 133px 154px 133px;*/
+}
+
+.date_div {
+	grid-column: span 3;
+}
+
+.wrapper_i {
+	/*padding-right: 53px; если .tooltip абсолютное положение*/
+	padding-right: 18px;
+	position: relative;
+	justify-self: end;
+	text-align: left;
+}
