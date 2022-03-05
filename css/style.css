@@ -351,7 +351,7 @@ ul.navigation_right_menu {
 }
 
 .duble_one {
-	background-image: url(../img/photo-1.jpg);
+	background-image: url("../img/photo-1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	grid-column: 2/4;
@@ -360,7 +360,7 @@ ul.navigation_right_menu {
 }
 
 .duble_two {
-	background-image: url(../img/photo-2.jpg);
+	background-image: url("../img/photo-2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	grid-column: 1/3;
@@ -409,15 +409,15 @@ ul.navigation_right_menu {
 	background-repeat: no-repeat;
 }
 .two_line_first_slot .benefits_content_item_img {
-	background-image: url(../img/hause.svg);
+	background-image: url("../img/hause.svg");
 }
 
 .two_line_two_slot .benefits_content_item_img {
-	background-image: url(../img/eat.svg);
+	background-image: url("../img/eat.svg");
 }
 
 .two_line_three_slot .benefits_content_item_img {
-	background-image: url(../img/present.svg);
+	background-image: url("../img/present.svg");
 }
 
 
@@ -826,13 +826,13 @@ ul.navigation_right_menu {
 	width: 16px;
 	height: 16px;
 	right: 19px;
-	background-image: url(../img/date-ico.svg);
+	top: 17px;
+	background-image: url("../img/date-ico.svg");
 	background-size: 16px 15px;
 	background-position: center;
 	background-repeat: no-repeat;
 	opacity: 0.6;
-	top: 17px;
-
+	z-index: 2;
 }
    
 .date_input:hover {
@@ -977,7 +977,7 @@ ul.navigation_right_menu {
 	cursor: pointer;
 	outline: none;
 	box-shadow: none;
-	background-image: url(../img/info.svg);
+	background-image: url("../img/info.svg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: auto;
