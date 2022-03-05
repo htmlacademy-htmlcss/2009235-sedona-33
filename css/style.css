@@ -4,7 +4,6 @@
 	font-style: normal;
 	font-weight: 400;
 	src: url("../fonts/ptsans-400.woff2") format("woff2");
-	/*src: local("PT Sans"), url("../fonts/ptsans-400.woff2") format("woff2");*/
 	font-display: swap;
 }
  
@@ -18,7 +17,7 @@
 
 /*общий шрифт*/
 body {
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'PT Sans', 'Helvetica', sans-serif;
 	font-size: 22px;
 	line-height: 26px;
 	padding: 0;
@@ -36,13 +35,15 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
+	min-width: 1280px;
 }
 
 .body_container {
 	max-width: 1200px;
 	margin: 0 auto;
 	background-color: white;
-	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+	box-shadow:00 15px rgba(0, 0, 0, 0.2);
 
 	display: flex;
 	justify-content: space-between;
@@ -99,15 +100,15 @@ body {
 .h2, .h2_p {
 	margin-block-start: 15px;
 	margin-block-end: 15px;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
+	margin-inline-start:0;
+	margin-inline-end:0;
 }
 
 .h3, .h3_p {
 	margin-block-start: 15px;
 	margin-block-end: 15px;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
+	margin-inline-start:0;
+	margin-inline-end: 0;
 }
 
 .search .h2_p {
@@ -142,9 +143,9 @@ body {
 /*расположение левого и правого меню*/
 .main-header ul { 
 	list-style: none;
-	margin-block-start: 0px;
-	margin-block-end: 0px;
-	padding-inline-start: 0px;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	padding-inline-start: 0;
 }
 
 ul.navigation_main_menu {
@@ -219,59 +220,58 @@ ul.navigation_right_menu {
 }
 
 .navigation_right_menu .navigation_link {
-	padding: 12px 5px;
-}
-.navigation_right_menu .navigation_item {
-	margin: 0px 0px;
+	min-width: 42px;
+	min-height: 66px;
 }
 
-.navigation_link_div {
-	min-width: 32px;
-	min-height: 42px;
-	position: relative;
+.navigation_right_menu .navigation_item {
+	margin: 0;
 }
-.navigation_link_div svg {
+
+
+.navigation_link svg {
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	margin: auto;
+	margin: auto auto auto 11.5px;
 	fill: #000000;	
 }
+
+
 /*---  <3  ---*/
 
-.navigation_link_div output {
+.navigation_link output {
 	font-weight: normal;
 	font-size: 10px;
 	line-height: 13px;
-
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-
 	color: white;
 	border-radius: 10px;
 	background-color: #7DB54F;
 	min-width: 20px;
 	min-height: 20px;
-
-	position: absolute;
-	left: 20px;
-	top: 6px;
-	z-index: 1;
-	/*на случий заполнея большим числом*/
-	padding: 0 5px;
+	max-width: 150px;
+	display: inline-block;
+	position: relative;
+	padding: 4px 5px;
+	margin: 0;
+	margin-top: 15px;
+	margin-left: 25px;
 	box-sizing: border-box;
+	word-wrap: break-word;
 }
+
+.navigation_link:active output {
+	color:rgba(255, 255, 255, 0.3)
+}
+
 
 /*Кнопкa в меню2*/
 .navigation_item .buttom_brown_div {
-	margin-left: 20px;
-	height: 37px;
+	margin: 0;
+	margin-left: 18px;
+	min-height: 37px;
 	width: 160px;
 	font-weight: bold;
 	font-size: 16px;
@@ -281,6 +281,7 @@ ul.navigation_right_menu {
 	border-radius: 4px;
 	outline: none;
 	padding: 0;
+	align-self: center;
 }
 
 
@@ -319,7 +320,7 @@ ul.navigation_right_menu {
 	line-height: 36px;
 }
 .first_screen2 {
-	padding: 48px 0px 66px 0px;
+	padding: 48px 0 66px 0;
 }
 
 /*-----------Преимущества--------*/
@@ -336,7 +337,7 @@ ul.navigation_right_menu {
 
 .benefits_content_item {
 	min-height: 236px;
-	padding: 74px 0px;
+	padding: 74px 0;
 
 	/*если флекс*/
 	/*flex: 1 1 33.333333%;*/
@@ -423,16 +424,16 @@ ul.navigation_right_menu {
 /*убрать точки и отступы из списка*/
 .benefits ul, .main-footer ul { 
 	list-style: none;
-	margin-block-start: 0px;
-	margin-block-end: 0px;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
-	padding-inline-start: 0px;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+	padding-inline-start: 0;
 }
 
 /*--------------Поиск гостиницы-----------*/
 .search {
-	padding: 76px 0px 93px 0px;
+	padding: 76px 0 93px 0;
 }
 .buttom_brown {
 	font-weight: bold;
@@ -444,7 +445,7 @@ ul.navigation_right_menu {
 	text-align: center;
 	display: block;
 	width: 98%;
-	height: 60px;
+	min-height: 60px;
 	max-width: 575px;
 }
 .buttom_brown .buttom_brown_div {
@@ -470,7 +471,6 @@ ul.navigation_right_menu {
 }
 .buttom_brown_div:focus {
 	background: #615048;
-	/*border: 3px solid #83B3D3; используются тени для того что бы контент не уезжал*/
 	outline: none;
 	box-shadow: 0 0 0 3px #83B3D3;
 }
@@ -485,17 +485,17 @@ ul.navigation_right_menu {
 	background-size: cover;
 	color: white;
 	background-color: darkcyan;
-	padding: 94px 0px;
+	padding: 94px 0;
 	flex-grow: 1;
 }
 .subscribe .h2_p {
-	margin-block-start: 0px;
+	margin-block-start: 0;
 	margin-block-end: 46px;
 	color: white;
 }
 
 .subscribe .h2 {
-	margin-block-start: 0px;
+	margin-block-start: 0;
 	margin-block-end: 29px;
 }
 
@@ -508,7 +508,7 @@ ul.navigation_right_menu {
 
 
 .email input[type="email"] {
-	font-family: PT Sans;
+	font-family: 'PT Sans', 'Helvetica', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
@@ -516,12 +516,12 @@ ul.navigation_right_menu {
 	color: #000000;
 	background: #F2F2F2;
 	border: none;
-	border-radius: 10px 0px 0px 10px;
-	height: 60px;
-	padding: 0px 22px 0px 19px;
+	border-radius: 10px 0 0 10px;
+	min-height: 60px;
+	padding: 0 22px 0 19px;
 	max-width: 600px;
 	flex-grow: 1;
-	margin-right: 0px;
+	margin: 0;
 	box-sizing: border-box;
 	cursor: text;
 }
@@ -550,8 +550,9 @@ ul.navigation_right_menu {
 }
 
 .email button[type="submit"] {
-	border-radius: 0px 10px 10px 0px;
+	border-radius: 0 10px 10px 0;
 	min-width: 200px;
+	max-width: 300px;
 	flex-shrink:0;
 }
 
@@ -560,12 +561,12 @@ ul.navigation_right_menu {
 	font-size: 20px;
 	line-height: 26px;
 	text-transform: uppercase;
-	height: 60px;
+	min-height: 60px;
 	color: white;
 	cursor: pointer;
 	background: #83B3D3;
 	border: none;
-	margin: 0px;
+	margin: 0;
 	padding: 0;
 	outline: none;
 }
@@ -596,7 +597,7 @@ ul.navigation_right_menu {
 	align-items: center;
 	align-content: center;
 	flex-direction: row;
-	padding: 25px 0px;
+	padding: 25px 0;
 }
 
 /*-------------Соцсети------------*/
@@ -785,7 +786,7 @@ ul.navigation_right_menu {
 /*-------*/
 
 .modal .h2 {
-	margin-block-start: 0px;
+	margin-block-start: 0;
 	margin-block-end: 59px;
 	text-align: left;
 	line-height: 40px;
@@ -812,10 +813,11 @@ ul.navigation_right_menu {
 	background-color: #F2F2F2;
 	border-radius: 4px;
 	height: 50px;
-	padding: 0px 54px 0px 19px;
-	margin: 0px;
+	padding: 0 54px 0 19px;
+	margin: 0;
 	box-sizing: border-box;
 	outline: none;
+	z-index: 1;
 }
 
 .date_div::before {
@@ -829,8 +831,7 @@ ul.navigation_right_menu {
 	background-position: center;
 	background-repeat: no-repeat;
 	opacity: 0.6;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 17px;
 
 }
    
@@ -857,24 +858,24 @@ ul.navigation_right_menu {
 	margin: 0;
 }
 
-.vaild-ivalid_date {
+.vaild-invalid_date {
 	font-size: 16px;
 	line-height: 40px;
+	min-height: 40px;
 	display: block;
 	background-color: transparent;
 	margin-top: -7px;
-	position: absolute;
-	top: 100%;
+	position: relative;
 }
 
 
-.date_input:invalid + .vaild-ivalid_date::before {
-    content: 'Мы не можем отправить вас в прошлое.';
+.date_input:invalid + .vaild-invalid_date::before {
+    content: attr(invalid-date-text);
     color: #FF5757;
 }
 
-.date_input:valid + .vaild-ivalid_date::before {
-    content: 'На эти даты есть свободные номера. Пока есть.';
+.date_input:valid + .vaild-invalid_date::before {
+    content: attr(valid-date-text);
     color:#000000;
 }
 
@@ -885,10 +886,10 @@ ul.navigation_right_menu {
 	border-radius: 4px;
 
 	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: center;
-
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .back, .next {
@@ -902,7 +903,16 @@ ul.navigation_right_menu {
 	outline: none;
 	box-shadow: none;
 	position: relative;
-	opacity: 0.6;
+	flex-shrink: 0;
+	opacity: 0.3;
+}
+
+.back {
+	margin-left: 16px;
+}
+
+.next {
+	margin-right: 16px;
 }
 
 
@@ -912,7 +922,7 @@ ul.navigation_right_menu {
 	left: 6px;
 	width: 13px;
 	height: 1px;
-	background-color: #242424;
+	background-color: #000000;
 	content: "";
 }
 
@@ -930,7 +940,7 @@ ul.navigation_right_menu {
 }
 
 .back:active, .next:active {
-	opacity: 0.3;
+	opacity: 0.2;
 }
 
 .count input[type="number"] {
@@ -941,8 +951,8 @@ ul.navigation_right_menu {
 	outline: none;
 	box-shadow: none;
 	position: relative;
-	width: 25px; /*!!!! будет видно только двухзначное число!!!*/
 	text-align: center;
+	flex-grow: 1;
 }
 
 .count input[type="number"]::-webkit-inner-spin-button {
@@ -984,7 +994,7 @@ ul.navigation_right_menu {
 	padding: 20px 18px 23px 22px;
 	background-color: #333333;
 	border-radius: 10px;
-	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 	color: #ffffff;
 	font-size: 16px;
 	line-height: 20px;	
@@ -997,12 +1007,13 @@ ul.navigation_right_menu {
 	transform: translateX(-50%);
 	left: 50%;
 	display: none;
+	margin: 0;
 }
 .tooltip-text:after {
 	content:'';
 	background-image: url("../img/triangle.svg");
 	width: 19px;
-	height: 8px; /*-1px поскольку не доконца прилегает*/
+	height: 9px;
 	position:absolute;
 	transform: rotate(0deg);
 	bottom: 100%;
@@ -1013,13 +1024,13 @@ ul.navigation_right_menu {
 }
 
 .tooltip {
-	/*position: absolute;
+	position: absolute;
 	margin-top: 7.5px;
-	margin-left: 10px; если абсолютное положение*/
-	margin-left: 5px;
-	position: relative;
+	margin-left: 10px;
 	display: inline-block;
-	transform: translateY(-25%);
+	/*margin-left: 5px;
+	position: relative;
+	transform: translateY(-25%); если position: relative;*/
 }
 
 .dop_info:hover + .tooltip-text,
@@ -1032,11 +1043,12 @@ ul.navigation_right_menu {
 	border-radius: 10px;
 	width: 100%;
 	grid-column: 1/-1;
+	margin-top: 33px;
 }
 
 .modal-form {
 	display: grid;
-	row-gap: 40px;
+	row-gap: 7px;
 	grid-template-columns: 27% 23.2% 26.6% 23.2%;
 	/* исходные значения из макета */
 	/*grid-template-columns: 155px 133px 154px 133px;*/
@@ -1047,8 +1059,8 @@ ul.navigation_right_menu {
 }
 
 .wrapper_i {
-	/*padding-right: 53px; если .tooltip абсолютное положение*/
-	padding-right: 18px;
+	padding-right: 53px;
+	/*padding-right: 18px; если .tooltip положение relative*/
 	position: relative;
 	justify-self: end;
 	text-align: left;
