@@ -348,7 +348,7 @@ ul.navigation-right-menu {
   /*padding: 74px 0; old padding*/
   padding: 69px 0 79px 0;
   /*если флекс*/
-  flex: 1 1 33.33%;
+  flex: 1 1 400px;
 }
 
 .benefits-content-item-duble {
@@ -356,26 +356,35 @@ ul.navigation-right-menu {
   /*если grid*/
   /*grid-column: span 2;*/
   /*если флекс*/
-  flex: 1 1 66.66%;
+  flex: 2 2 800px;
+  display: block;
+  position: relative;
 }
 
+.benefits-content-item-duble img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  justify-content: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* если photo-1-2.jpg-декоративное изображение...
 .duble-one {
   background-image: url("../img/photo-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /*если grid*/
-  /*grid-column: 2/4;
-  grid-row: 1/2;*/
 }
 
 .duble-two {
   background-image: url("../img/photo-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /*если grid*/
-  /*grid-column: 1/3;
-  grid-row: 3/4;*/
-}
+}*/
 
 .first-line-first-slot,
 .three-line-three-slot {
@@ -431,14 +440,17 @@ ul.navigation-right-menu {
 
 .two-line-first-slot .benefits-content-item-img {
   background-image: url("../img/hause.svg");
+  background-size: 75px 72px;
 }
 
 .two-line-two-slot .benefits-content-item-img {
   background-image: url("../img/eat.svg");
+  background-size: 74px 70px;
 }
 
 .two-line-three-slot .benefits-content-item-img {
   background-image: url("../img/present.svg");
+  background-size: 64px 76px;
 }
 
 
