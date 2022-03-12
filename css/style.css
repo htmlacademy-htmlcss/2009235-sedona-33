@@ -54,11 +54,6 @@ body {
   overflow: hidden;
 }
 
-button,
-input {
-  font-family: "PT Sans", "Helvetica", sans-serif;
-}
-
 img {
   max-width: 100%;
   object-fit: contain;
@@ -273,6 +268,7 @@ ul.navigation-right-menu {
   align-items: center;
   justify-content: center;
   padding: 0;
+  font-family: "PT Sans", "Helvetica", sans-serif;
 }
 
 .navigation-item .buttom-brown-div {
@@ -547,6 +543,7 @@ ul.navigation-right-menu {
   margin: 0;
   box-sizing: border-box;
   cursor: text;
+  font-family: "PT Sans", "Helvetica", sans-serif;
 }
 
 .email-input::placeholder {
@@ -593,6 +590,7 @@ ul.navigation-right-menu {
   margin: 0;
   padding: 0;
   outline: none;
+  font-family: "PT Sans", "Helvetica", sans-serif;
 }
 
 .blue-button:hover {
@@ -854,6 +852,7 @@ ul.navigation-right-menu {
   box-sizing: border-box;
   outline: none;
   z-index: 1;
+  font-family: "PT Sans", "Helvetica", sans-serif;
 }
 
 .date-div::before {
@@ -995,6 +994,7 @@ ul.navigation-right-menu {
   position: relative;
   text-align: center;
   flex-grow: 1;
+  font-family: "PT Sans", "Helvetica", sans-serif;
 }
 
 .count input[type="number"]::-webkit-inner-spin-button {
